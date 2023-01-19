@@ -1,9 +1,22 @@
 <script>
-	import Header from '$lib/Header.svelte';
 	import GeometryViewer from '$lib/GeometryViewer.svelte';
-	import Controls from '$lib/Controls.svelte';
+	import Sidebar from '$lib/Sidebar.svelte';
 </script>
 
-<Header />
-<Controls />
-<GeometryViewer />
+<div>
+	<Sidebar />
+	<GeometryViewer />
+</div>
+
+<style>
+	:global(body) {
+		margin: 0;
+		padding: 0;
+	}
+
+	div {
+		display: grid;
+		grid-template-columns: 15rem 1fr;
+		height: 100vh;
+	}
+</style>
