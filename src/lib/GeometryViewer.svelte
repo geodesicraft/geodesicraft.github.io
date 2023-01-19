@@ -4,18 +4,16 @@
 </script>
 
 <div>
-	<!-- <SC.Canvas antialias background={new THREE.Color('papayawhip')}>
+	<SC.Canvas antialias background={new THREE.Color('papayawhip')}>
 		<SC.Mesh geometry={new THREE.BoxGeometry()} />
 		<SC.PerspectiveCamera position={[1, 1, 3]} />
 		<SC.OrbitControls enableZoom={false} />
-	</SC.Canvas> -->
-	<p>geometry viewer</p>
+	</SC.Canvas>
 </div>
 
 <style>
 	div {
-		height: 100%;
-		width: 100%;
 		background: grey;
+		position: relative;
 	}
 </style>
