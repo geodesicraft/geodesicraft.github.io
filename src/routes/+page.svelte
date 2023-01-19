@@ -1,9 +1,9 @@
 <script>
 	import Header from '$lib/Header.svelte';
-	import GeometryVisualizer from '$lib/GeometryVisualizer.svelte';
+	import GeometryViewer from '$lib/GeometryViewer.svelte';
 	import Controls from '$lib/Controls.svelte';
 </script>
 
 <Header />
 <Controls />
-<GeometryVisualizer />
+<GeometryViewer />
