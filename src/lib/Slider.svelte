@@ -1,5 +1,4 @@
 <script>
-	export let label;
 	export let value;
 	export let min;
 	export let max;
@@ -7,7 +6,7 @@
 </script>
 
 <div>
-	<label for="slider">{label}</label>
+	<label for="slider"><slot /></label>
 	<input id="slider" type="range" bind:value {min} {max} {step} />
 	<label for="slider">{value}</label>
 </div>

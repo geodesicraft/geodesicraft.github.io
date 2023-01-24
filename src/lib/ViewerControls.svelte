@@ -3,7 +3,7 @@
 </script>
 
 <div>
-	<Toggle checked />
+	<Toggle checked>Rotate</Toggle>
 </div>
 
 <style>
