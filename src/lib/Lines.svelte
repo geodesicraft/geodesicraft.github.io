@@ -2,7 +2,6 @@
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { Line2 } from '@threlte/core';
 	import { lines } from '$lib/stores.js';
-	import { getRandomColor } from '$lib/getRandomColor.js';
 
 	$: console.log('lines:', $lines);
 </script>
@@ -12,7 +11,7 @@
 		material={new LineMaterial({
 			worldUnits: true,
 			linewidth: 0.05,
-			color: getRandomColor()
+			color: 0x555555
 		})}
 		points={line}
 	/>

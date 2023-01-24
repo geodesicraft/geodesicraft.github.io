@@ -3,7 +3,6 @@
 	import { Mesh } from '@threlte/core';
 	import { BackSide, FrontSide, MeshLambertMaterial, Vector3 } from 'three';
 	import { faces } from '$lib/stores.js';
-	import { getRandomColor } from '$lib/getRandomColor.js';
 
 	const points = [
 		new Vector3(0, 0, 0),
