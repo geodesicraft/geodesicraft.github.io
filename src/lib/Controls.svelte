@@ -1,5 +1,5 @@
 <script>
-	import { lines, vertices, faces } from '$lib/stores.js';
+	import { lines, vertices, faces, vertexSize } from '$lib/stores.js';
 
 	function setLines() {
 		lines.set([
@@ -55,4 +55,6 @@
 	setFaces();
 </script>
 
-<!-- <button on:click={setLines}>Set Lines</button> -->
+<span>Vertex Size</span>
+<input type="range" bind:value={$vertexSize} min="0" max="1" step="0.05" />
+<span>{$vertexSize}</span>
