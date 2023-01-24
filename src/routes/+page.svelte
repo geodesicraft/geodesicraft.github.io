@@ -9,6 +9,10 @@
 </div>
 
 <style>
+	:global(*) {
+		font-family: sans-serif;
+	}
+
 	:global(body) {
 		margin: 0;
 		padding: 0;
