@@ -11,7 +11,24 @@ export function createGeodesic() {
 	);
 	vertices.set(cartesianVertices);
 
-	edges.set([]);
+	const sphericalEdges = [
+		[
+			[1, 0, 0],
+			[1, 1, 0]
+		],
+		[
+			[1, 0, 0],
+			[1, 1, 1]
+		],
+		[
+			[1, 1, 0],
+			[1, 1, 1]
+		]
+	];
+	const cartesianEdges = sphericalEdges.map((sphericalEdge) =>
+		sphericalEdge.map((sphericalVertex) => sphericalToCartesian(...sphericalVertex))
+	);
+	edges.set(cartesianEdges);
 
 	faces.set([]);
 }
