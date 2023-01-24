@@ -1,5 +1,6 @@
 <script>
 	import { lines, vertices, faces, vertexSize } from '$lib/stores.js';
+	import Slider from '$lib/Slider.svelte';
 
 	function setLines() {
 		lines.set([
@@ -55,6 +56,4 @@
 	setFaces();
 </script>
 
-<span>Vertex Size</span>
-<input type="range" bind:value={$vertexSize} min="0" max="1" step="0.05" />
-<span>{$vertexSize}</span>
+<Slider label="Vertex Size" bind:value={$vertexSize} min="0" max="1" step="0.05" />
