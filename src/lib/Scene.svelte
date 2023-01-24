@@ -1,25 +1,13 @@
 <script>
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { DirectionalLight, Line2, OrbitControls, PerspectiveCamera } from '@threlte/core';
-
-	const lines = [
-		[
-			[0, 0, 0],
-			[1, 1, 1]
-		],
-		[
-			[0, 0, 0],
-			[1, -1, 1]
-		],
-		[
-			[0, 0, 0],
-			[-1, -1, 1]
-		]
-	];
+	import { lines } from '$lib/stores.js';
 
 	const getRandomColor = () => {
 		return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 	};
+
+	console.log($lines);
 </script>
 
 <PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
@@ -28,7 +16,7 @@
 
 <DirectionalLight position={{ y: 10 }} />
 
-{#each lines as line}
+{#each $lines as line}
 	<Line2
 		material={new LineMaterial({
 			worldUnits: true,
