@@ -2,12 +2,10 @@
 	export let checked;
 </script>
 
-<div>
-	<label>
-		<slot />
-		<input type="checkbox" bind:checked />
-	</label>
-</div>
+<label>
+	<slot />
+	<input type="checkbox" bind:checked />
+</label>
 
 <style>
 	label {

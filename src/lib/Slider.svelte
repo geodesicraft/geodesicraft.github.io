@@ -5,14 +5,14 @@
 	export let step;
 </script>
 
-<div>
-	<label for="slider"><slot /></label>
-	<input id="slider" type="range" bind:value {min} {max} {step} />
-	<label for="slider">{value}</label>
-</div>
+<label>
+	<slot />
+	<input type="range" bind:value {min} {max} {step} />
+	{value}
+</label>
 
 <style>
-	div {
+	label {
 		background: #aaaaaa;
 		border-radius: 0.5rem;
 		padding: 0.4rem;
