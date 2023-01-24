@@ -1,7 +1,15 @@
 import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 
 // viewer settings
-export const autoRotate = writable(true);
+export const autoRotate = writable(
+	browser ? JSON.parse(window.localStorage.getItem('autoRotate')) ?? true : true
+);
+autoRotate.subscribe((value) => {
+	if (browser) {
+		window.localStorage.setItem('autoRotate', value);
+	}
+});
 
 // dome settings
 export const vertexSize = writable(0.15);
