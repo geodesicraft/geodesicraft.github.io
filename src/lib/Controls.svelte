@@ -1,5 +1,5 @@
 <script>
-	import { edges, vertices, faces, vertexSize } from '$lib/stores.js';
+	import { edges, vertices, faces, vertexSize, edgeThickness } from '$lib/stores.js';
 	import Slider from '$lib/Slider.svelte';
 
 	function setEdges() {
@@ -57,3 +57,5 @@
 </script>
 
 <Slider label="Vertex Size" bind:value={$vertexSize} min="0" max="1" step="0.05" />
+<br />
+<Slider label="Edge Thickness" bind:value={$edgeThickness} min="0.01" max="0.5" step="0.01" />

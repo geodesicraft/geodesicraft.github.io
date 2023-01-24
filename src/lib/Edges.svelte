@@ -1,7 +1,7 @@
 <script>
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { Line2 } from '@threlte/core';
-	import { edges } from '$lib/stores.js';
+	import { edges, edgeThickness } from '$lib/stores.js';
 
 	$: console.log('edges:', $edges);
 </script>
@@ -10,7 +10,7 @@
 	<Line2
 		material={new LineMaterial({
 			worldUnits: true,
-			linewidth: 0.05,
+			linewidth: $edgeThickness,
 			color: 0x555555
 		})}
 		points={edge}
