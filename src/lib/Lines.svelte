@@ -2,10 +2,7 @@
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { DirectionalLight, Line2, OrbitControls, PerspectiveCamera } from '@threlte/core';
 	import { lines } from '$lib/stores.js';
-
-	const getRandomColor = () => {
-		return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-	};
+	import { getRandomColor } from '$lib/getRandomColor.js';
 
 	$: console.log('lines:', $lines);
 </script>
