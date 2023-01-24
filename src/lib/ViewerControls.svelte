@@ -1,9 +1,10 @@
 <script>
 	import Toggle from '$lib/Toggle.svelte';
+	import { autoRotate } from '$lib/stores.js';
 </script>
 
 <div>
-	<Toggle checked>Rotate</Toggle>
+	<Toggle bind:checked={$autoRotate}>Rotate</Toggle>
 </div>
 
 <style>
