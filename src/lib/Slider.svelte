@@ -18,4 +18,8 @@
 		border-radius: 0.5rem;
 		padding: 0.4rem;
 	}
+
+	input {
+		cursor: pointer;
+	}
 </style>
