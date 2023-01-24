@@ -2,14 +2,9 @@
 	import { ConvexGeometry } from 'three/examples/jsm/geometries/ConvexGeometry';
 	import { Mesh } from '@threlte/core';
 	import { BackSide, FrontSide, MeshLambertMaterial, Vector3 } from 'three';
-	import { faces } from '$lib/stores.js';
+	import { faces, vertices } from '$lib/stores.js';
 
-	const points = [
-		new Vector3(0, 0, 0),
-		new Vector3(1, 1, 1),
-		new Vector3(1, -1, 1),
-		new Vector3(-1, -1, 1)
-	];
+	const points = $vertices.map((vertex) => new Vector3(...vertex));
 
 	const geometry = new ConvexGeometry(points);
 
