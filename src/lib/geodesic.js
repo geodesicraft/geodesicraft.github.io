@@ -1,4 +1,5 @@
 import { edges, vertices, faces } from '$lib/stores.js';
+import { sphericalToCartesian } from '$lib/sphericalToCartesian.js';
 
 export function createGeodesic() {
 	const sphericalVertices = [
@@ -60,12 +61,3 @@ export function createGeodesic() {
 	);
 	faces.set(cartesianFaces);
 }
-
-function sphericalToCartesian(rho, theta, phi) {
-	// radius, inclination, aziumuth
-	const x = rho * Math.sin(theta) * Math.cos(phi);
-	const y = rho * Math.sin(theta) * Math.sin(phi);
-	const z = rho * Math.cos(theta);
-	return [x, y, z];
-}
-// https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates
