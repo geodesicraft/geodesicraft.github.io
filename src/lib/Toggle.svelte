@@ -3,8 +3,8 @@
 </script>
 
 <div>
-	<label for="rotate">Rotate</label>
-	<input type="checkbox" id="rotate" bind:checked />
+	<label for="toggle">Rotate</label>
+	<input id="toggle" type="checkbox" bind:checked />
 </div>
 
 <style>

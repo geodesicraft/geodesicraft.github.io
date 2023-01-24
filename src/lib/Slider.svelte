@@ -7,9 +7,9 @@
 </script>
 
 <div>
-	<span>{label}</span>
-	<input type="range" bind:value {min} {max} {step} />
-	<span>{value}</span>
+	<label for="slider">{label}</label>
+	<input id="slider" type="range" bind:value {min} {max} {step} />
+	<label for="slider">{value}</label>
 </div>
 
 <style>
