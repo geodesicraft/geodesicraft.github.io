@@ -65,6 +65,7 @@
 	div {
 		display: flex;
 		flex-direction: column;
+		overflow: auto;
 		padding: 0.8rem 0.5rem;
 		gap: 0.8rem;
 	}
