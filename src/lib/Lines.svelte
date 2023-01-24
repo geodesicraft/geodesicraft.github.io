@@ -7,7 +7,7 @@
 		return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 	};
 
-	console.log($lines);
+	$: console.log('lines:', $lines);
 </script>
 
 <PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
