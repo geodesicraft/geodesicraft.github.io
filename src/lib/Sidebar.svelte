@@ -15,6 +15,6 @@
 		display: grid;
 		grid-template-rows: min-content 1fr min-content;
 		min-height: 0;
-		background: lightgray;
+		background: #d3d3d3;
 	}
 </style>
