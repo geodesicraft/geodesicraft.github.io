@@ -10,6 +10,7 @@
 <style>
 	* {
 		cursor: pointer;
+		user-select: none;
 	}
 
 	div {
