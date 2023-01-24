@@ -2,8 +2,9 @@
 
 <style>
 	h1 {
-		width: 100%;
 		text-align: center;
-		margin: 0.75rem 0;
+		margin: 0;
+		padding: 0.75rem 0;
+		border-bottom: 0.1rem solid #aaaaaa;
 	}
 </style>

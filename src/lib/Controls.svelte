@@ -65,7 +65,7 @@
 	div {
 		display: flex;
 		flex-direction: column;
-		padding: 0 0.5rem;
-		gap: 0.6rem;
+		padding: 0.8rem 0.5rem;
+		gap: 0.8rem;
 	}
 </style>
