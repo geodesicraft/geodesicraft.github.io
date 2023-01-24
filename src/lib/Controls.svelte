@@ -17,6 +17,8 @@
 			]
 		]);
 	}
+
+	setLines();
 </script>
 
-<button on:click={setLines}>Set Lines</button>
+<!-- <button on:click={setLines}>Set Lines</button> -->

@@ -1,11 +1,15 @@
 <script>
 	import { Canvas } from '@threlte/core';
-	import Scene from '$lib/Scene.svelte';
+	import Lines from '$lib/Lines.svelte';
+	import Vertices from '$lib/Vertices.svelte';
+	import Faces from '$lib/Faces.svelte';
 </script>
 
 <div>
 	<Canvas>
-		<Scene />
+		<Lines />
+		<Vertices />
+		<Faces />
 	</Canvas>
 </div>
 
