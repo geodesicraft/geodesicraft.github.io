@@ -1,6 +1,6 @@
 <script>
 	import { Canvas, DirectionalLight, OrbitControls, PerspectiveCamera } from '@threlte/core';
-	import Lines from '$lib/Lines.svelte';
+	import Edges from '$lib/Edges.svelte';
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
 </script>
@@ -13,7 +13,7 @@
 
 		<DirectionalLight position={{ y: 10 }} />
 
-		<Lines />
+		<Edges />
 		<Vertices />
 		<Faces />
 	</Canvas>

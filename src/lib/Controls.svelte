@@ -1,9 +1,9 @@
 <script>
-	import { lines, vertices, faces, vertexSize } from '$lib/stores.js';
+	import { edges, vertices, faces, vertexSize } from '$lib/stores.js';
 	import Slider from '$lib/Slider.svelte';
 
-	function setLines() {
-		lines.set([
+	function setEdges() {
+		edges.set([
 			[
 				[0, 0, 0],
 				[1, 1, 1]
@@ -51,7 +51,7 @@
 		]);
 	}
 
-	setLines();
+	setEdges();
 	setVertices();
 	setFaces();
 </script>
