@@ -2,8 +2,6 @@
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { Line2 } from '@threlte/core';
 	import { edges, edgeThickness } from '$lib/stores.js';
-
-	$: console.log('edges:', $edges);
 </script>
 
 {#each $edges as edge}

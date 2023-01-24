@@ -6,8 +6,6 @@
 
 	const geometry = new SphereGeometry(0.5);
 	const material = new MeshStandardMaterial();
-
-	$: console.log('vertices:', $vertices);
 </script>
 
 <InstancedMesh {geometry} {material}>
