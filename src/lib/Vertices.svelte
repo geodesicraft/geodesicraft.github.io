@@ -1,6 +1,6 @@
 <script>
 	import { vertices } from '$lib/stores.js';
-	import { MeshStandardMaterial, SphereGeometry } from 'three';
+	import { MeshStandardMaterial, SphereGeometry, Vector3 } from 'three';
 	import { InstancedMesh } from '@threlte/core';
 	import { Instance } from '@threlte/core';
 	import { getRandomColor } from '$lib/getRandomColor.js';
@@ -13,10 +13,6 @@
 
 <InstancedMesh {geometry} {material}>
 	{#each $vertices as vertex}
-		<Instance
-			position={{ x: vertex[0], y: vertex[1], z: vertex[2] }}
-			scale={0.15}
-			color={getRandomColor()}
-		/>
+		<Instance position={new Vector3(...vertex)} scale={0.15} color={getRandomColor()} />
 	{/each}
 </InstancedMesh>
