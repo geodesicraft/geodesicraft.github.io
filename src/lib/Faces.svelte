@@ -1,10 +1,9 @@
 <script>
-	import { ConvexGeometry } from 'three/examples/jsm/geometries/ConvexGeometry';
 	import { Mesh } from '@threlte/core';
 	import { BufferAttribute, BufferGeometry, DoubleSide, MeshLambertMaterial, Vector3 } from 'three';
-	import { faces, vertices } from '$lib/stores.js';
+	import { faces } from '$lib/stores.js';
 
-	const verticesMatrix = new Float32Array([0, 0, 0, 1, 1, 1, 1, -1, 1]);
+	const verticesMatrix = new Float32Array([...$faces[0][0], ...$faces[0][1], ...$faces[0][2]]);
 
 	const geometry = new BufferGeometry();
 
