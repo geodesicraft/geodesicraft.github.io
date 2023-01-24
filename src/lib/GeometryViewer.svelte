@@ -3,6 +3,7 @@
 	import Edges from '$lib/Edges.svelte';
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
+	import ViewerControls from '$lib/ViewerControls.svelte';
 </script>
 
 <div>
@@ -17,6 +18,7 @@
 		<Vertices />
 		<Faces />
 	</Canvas>
+	<ViewerControls />
 </div>
 
 <style>
