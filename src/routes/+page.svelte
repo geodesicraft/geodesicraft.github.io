@@ -1,6 +1,9 @@
 <script>
 	import GeometryViewer from '$lib/GeometryViewer.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';
+	import { createGeodesic } from '$lib/geodesic.js';
+
+	createGeodesic();
 </script>
 
 <div>

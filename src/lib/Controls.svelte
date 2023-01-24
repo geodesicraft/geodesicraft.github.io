@@ -1,59 +1,6 @@
 <script>
-	import { edges, vertices, faces, vertexSize, edgeThickness } from '$lib/stores.js';
+	import { vertexSize, edgeThickness } from '$lib/stores.js';
 	import Slider from '$lib/Slider.svelte';
-
-	function setEdges() {
-		edges.set([
-			[
-				[0, 0, 0],
-				[1, 1, 1]
-			],
-			[
-				[0, 0, 0],
-				[1, -1, 1]
-			],
-			[
-				[0, 0, 0],
-				[-1, -1, 1]
-			],
-			[
-				[1, 1, 1],
-				[1, -1, 1]
-			],
-			[
-				[1, -1, 1],
-				[-1, -1, 1]
-			]
-		]);
-	}
-
-	function setVertices() {
-		vertices.set([
-			[0, 0, 0],
-			[1, 1, 1],
-			[1, -1, 1],
-			[-1, -1, 1]
-		]);
-	}
-
-	function setFaces() {
-		faces.set([
-			[
-				[0, 0, 0],
-				[1, 1, 1],
-				[1, -1, 1]
-			],
-			[
-				[0, 0, 0],
-				[1, -1, 1],
-				[-1, -1, 1]
-			]
-		]);
-	}
-
-	setEdges();
-	setVertices();
-	setFaces();
 </script>
 
 <div>
