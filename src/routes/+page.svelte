@@ -11,7 +11,9 @@
 	<GeometryViewer />
 </div>
 
-<style>
+<style lang="scss">
+	$sidebar-width: 15rem;
+
 	:global(*) {
 		font-family: sans-serif;
 	}
@@ -23,7 +25,12 @@
 
 	div {
 		display: grid;
-		grid-template-columns: 15rem 1fr;
 		height: 100vh;
+	}
+
+	@media (min-width: ($sidebar-width * 2)) {
+		div {
+			grid-template-columns: $sidebar-width 1fr;
+		}
 	}
 </style>

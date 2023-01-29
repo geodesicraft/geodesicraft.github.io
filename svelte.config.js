@@ -1,4 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
+import seqPreprocessor from 'svelte-sequential-preprocessor';
+import { preprocessThrelte } from '@threlte/preprocess';
 
 export default {
 	kit: {
@@ -11,5 +14,6 @@ export default {
 			precompress: false,
 			strict: true
 		})
-	}
+	},
+	preprocess: seqPreprocessor([preprocess(), preprocessThrelte()])
 };
