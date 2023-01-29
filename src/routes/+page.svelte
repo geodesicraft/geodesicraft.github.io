@@ -1,14 +1,14 @@
 <script>
-	import GeometryViewer from '$lib/GeometryViewer.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';
 	import { createGeodesic } from '$lib/geodesic.js';
+	import ViewerArea from '$lib/ViewerArea.svelte';
 
 	createGeodesic();
 </script>
 
 <div>
 	<Sidebar />
-	<GeometryViewer />
+	<ViewerArea />
 </div>
 
 <style lang="scss">

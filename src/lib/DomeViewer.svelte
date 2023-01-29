@@ -3,7 +3,6 @@
 	import Edges from '$lib/Edges.svelte';
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
-	import ViewerControls from '$lib/ViewerControls.svelte';
 	import { autoRotate } from '$lib/stores.js';
 </script>
 
@@ -19,7 +18,6 @@
 		<Vertices />
 		<Faces />
 	</Canvas>
-	<ViewerControls />
 </div>
 
 <style>
