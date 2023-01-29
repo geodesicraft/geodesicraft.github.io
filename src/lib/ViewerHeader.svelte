@@ -1,27 +1,11 @@
-<div>
-	<span>Geodesicraft</span>
-	<a href="https://github.com/geodesicraft">About</a>
-</div>
+<div>Geodesicraft</div>
 
 <style>
 	div {
 		position: absolute;
-		top: 0;
-		right: 0;
-	}
-
-	span {
-		font-size: 1.5rem;
-	}
-
-	a {
-		text-align: center;
-		color: #266eb1;
-		font-weight: bold;
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
+		top: 0.5rem;
+		right: 1rem;
+		font-size: 1.3rem;
+		color: #444444;
 	}
 </style>

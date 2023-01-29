@@ -15,7 +15,7 @@
 	label {
 		background: #aaaaaa;
 		border-radius: 0.5rem;
-		padding: 0.4rem;
+		padding: 0.5rem;
 	}
 
 	input {
