@@ -10,6 +10,7 @@
 <style>
 	div {
 		pointer-events: auto;
-		display: flex;
+		display: block;
+		width: fit-content;
 	}
 </style>
