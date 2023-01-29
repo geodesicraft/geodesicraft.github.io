@@ -22,7 +22,6 @@
 
 <style>
 	div {
-		overflow: hidden;
 		height: 100%;
 	}
 </style>

@@ -12,6 +12,7 @@
 	.parent {
 		display: grid;
 		grid-template-columns: 1fr;
+		overflow: hidden;
 	}
 
 	.child {
