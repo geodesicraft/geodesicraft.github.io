@@ -11,6 +11,6 @@
 	div {
 		position: absolute;
 		bottom: 1.5rem;
-		right: 1rem;
+		left: 1rem;
 	}
 </style>
