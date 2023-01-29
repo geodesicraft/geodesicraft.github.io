@@ -28,7 +28,7 @@
 		height: 100vh;
 	}
 
-	@media (min-width: ($sidebar-width * 2)) {
+	@media (min-width: ($sidebar-width * 2.5)) {
 		div {
 			grid-template-columns: $sidebar-width 1fr;
 		}
