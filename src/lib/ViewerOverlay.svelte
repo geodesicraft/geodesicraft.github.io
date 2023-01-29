@@ -1,11 +1,11 @@
 <script>
 	import ViewerHeader from '$lib/ViewerHeader.svelte';
-	import ViewerFooter from '$lib/ViewerFooter.svelte';
+	import ViewerControls from '$lib/ViewerControls.svelte';
 </script>
 
 <div class="clickthroughable">
 	<ViewerHeader />
-	<ViewerFooter />
+	<ViewerControls />
 </div>
 
 <style>
