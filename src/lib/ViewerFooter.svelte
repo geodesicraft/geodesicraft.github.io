@@ -9,8 +9,7 @@
 
 <style>
 	div {
-		position: absolute;
-		bottom: 1.5rem;
-		left: 1rem;
+		pointer-events: auto;
+		display: flex;
 	}
 </style>

@@ -22,6 +22,8 @@
 
 <style>
 	div {
+		pointer-events: auto;
 		overflow: hidden;
+		height: 100%;
 	}
 </style>

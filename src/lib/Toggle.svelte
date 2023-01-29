@@ -14,5 +14,6 @@
 		background: #d3d3d3;
 		border-radius: 0.5rem;
 		padding: 0.6rem;
+		display: block;
 	}
 </style>
