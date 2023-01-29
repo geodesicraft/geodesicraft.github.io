@@ -23,6 +23,14 @@
 		padding: 0;
 	}
 
+	:global(.clickthroughable > *) {
+		pointer-events: auto;
+	}
+
+	:global(.clickthroughable) {
+		pointer-events: none;
+	}
+
 	div {
 		display: grid;
 		height: 100vh;

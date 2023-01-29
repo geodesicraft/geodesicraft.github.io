@@ -6,7 +6,7 @@
 	import { autoRotate } from '$lib/stores.js';
 </script>
 
-<div>
+<div class="clickthroughable">
 	<Canvas>
 		<PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
 			<OrbitControls autoRotate={$autoRotate} enableZoom={true} />
@@ -22,7 +22,6 @@
 
 <style>
 	div {
-		pointer-events: auto;
 		overflow: hidden;
 		height: 100%;
 	}

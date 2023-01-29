@@ -1,7 +1,9 @@
-<div>Geodesicraft</div>
+<div class="clickthroughable">
+	<span>Geodesicraft</span>
+</div>
 
 <style>
-	div {
+	span {
 		font-size: 1.3rem;
 		color: #444444;
 	}

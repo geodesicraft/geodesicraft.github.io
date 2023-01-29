@@ -3,9 +3,9 @@
 	import ViewerOverlay from '$lib/ViewerOverlay.svelte';
 </script>
 
-<div class="parent">
-	<div class="child"><DomeViewer /></div>
-	<div class="child"><ViewerOverlay /></div>
+<div class="parent clickthroughable">
+	<div class="child clickthroughable"><DomeViewer /></div>
+	<div class="child clickthroughable"><ViewerOverlay /></div>
 </div>
 
 <style>
@@ -18,7 +18,5 @@
 		grid-row-start: 1;
 		grid-column-start: 1;
 		overflow: hidden;
-		background: transparent;
-		pointer-events: none;
 	}
 </style>

@@ -3,16 +3,13 @@
 	import ViewerFooter from '$lib/ViewerFooter.svelte';
 </script>
 
-<div>
+<div class="clickthroughable">
 	<ViewerHeader />
 	<ViewerFooter />
 </div>
 
 <style>
 	div {
-		background: transparent;
-		pointer-events: none;
-
 		display: grid;
 		height: 100%;
 		align-content: space-between;
