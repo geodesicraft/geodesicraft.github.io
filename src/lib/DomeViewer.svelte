@@ -9,7 +9,7 @@
 
 <div>
 	<Canvas>
-		<PerspectiveCamera position={{ y: 4, x: 4, z: 4 }}>
+		<PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
 			<OrbitControls autoRotate={$viewerSettings.autoRotate} enableZoom={true} />
 		</PerspectiveCamera>
 
