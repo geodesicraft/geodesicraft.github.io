@@ -13,7 +13,7 @@
 			step={domeSettingsParameters.vertexSize.step}
 		/>
 		<Slider
-			name={domeSettingsParameters.vertexSize.name}
+			name={domeSettingsParameters.edgeThickness.name}
 			bind:value={$domeSettings.edgeThickness}
 			min={domeSettingsParameters.edgeThickness.min}
 			max={domeSettingsParameters.edgeThickness.max}
