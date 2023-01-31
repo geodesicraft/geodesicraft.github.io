@@ -1,16 +1,32 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-export const viewerSettings = writable({
-	autoRotate: browser ? JSON.parse(window.localStorage.getItem('autoRotate')) ?? true : true
-});
+const defaultViewerSettings = {
+	autoRotate: true
+};
 
-// TODO: loop over all the viewer settings to automatically store in localStorage
-// viewerSettings.autoRotate.subscribe((value) => {
-// 	if (browser) {
-// 		window.localStorage.setItem('autoRotate', value);
-// 	}
-// });
+let mergedViewerSettings = {};
+
+if (browser) {
+	const localViewerSettings = JSON.parse(window.localStorage.getItem('viewerSettings'));
+	if (localViewerSettings !== null) {
+		for (const [key, value] of Object.entries(defaultViewerSettings)) {
+			if (localViewerSettings[key] === undefined) {
+				mergedViewerSettings[key] = value;
+			} else {
+				mergedViewerSettings[key] = localViewerSettings[key];
+			}
+		}
+	}
+}
+
+export const viewerSettings = writable(mergedViewerSettings);
+
+viewerSettings.subscribe((value) => {
+	if (browser) {
+		window.localStorage.setItem('viewerSettings', JSON.stringify(value));
+	}
+});
 
 export const domeSettings = writable({
 	vertexSize: 0.15,
