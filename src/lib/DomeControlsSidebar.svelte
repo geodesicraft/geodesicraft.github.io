@@ -5,20 +5,15 @@
 
 <div class="outer">
 	<div class="inner">
-		<Slider
-			name={domeSettingsParameters.vertexSize.name}
-			bind:value={$domeSettings.vertexSize}
-			min={domeSettingsParameters.vertexSize.min}
-			max={domeSettingsParameters.vertexSize.max}
-			step={domeSettingsParameters.vertexSize.step}
-		/>
-		<Slider
-			name={domeSettingsParameters.edgeThickness.name}
-			bind:value={$domeSettings.edgeThickness}
-			min={domeSettingsParameters.edgeThickness.min}
-			max={domeSettingsParameters.edgeThickness.max}
-			step={domeSettingsParameters.edgeThickness.step}
-		/>
+		{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
+			<Slider
+				name={value.name}
+				bind:value={$domeSettings[key]}
+				min={value.min}
+				max={value.max}
+				step={value.step}
+			/>
+		{/each}
 	</div>
 </div>
 
