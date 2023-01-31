@@ -4,7 +4,7 @@
 	import ViewerArea from '$lib/ViewerArea.svelte';
 	import DomeControlsFooter from '$lib/DomeControlsFooter.svelte';
 
-	createGeodesic();
+	// createGeodesic();
 </script>
 
 <div class="main">

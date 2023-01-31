@@ -1,21 +1,24 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-// viewer settings
-export const autoRotate = writable(
-	browser ? JSON.parse(window.localStorage.getItem('autoRotate')) ?? true : true
-);
-autoRotate.subscribe((value) => {
-	if (browser) {
-		window.localStorage.setItem('autoRotate', value);
-	}
+export const viewerSettings = writable({
+	autoRotate: browser ? JSON.parse(window.localStorage.getItem('autoRotate')) ?? true : true
 });
 
-// dome settings
-export const vertexSize = writable(0.15);
-export const edgeThickness = writable(0.05);
+// TODO: loop over all the viewer settings to automatically store in localStorage
+// viewerSettings.autoRotate.subscribe((value) => {
+// 	if (browser) {
+// 		window.localStorage.setItem('autoRotate', value);
+// 	}
+// });
 
-// dome data
-export const edges = writable([]);
-export const vertices = writable([]);
-export const faces = writable([]);
+export const domeSettings = writable({
+	vertexSize: 0.15,
+	edgeThickness: 0.05
+});
+
+export const domeData = writable({
+	edges: [],
+	vertices: [],
+	faces: []
+});

@@ -1,5 +1,5 @@
 <script>
-	import { vertices, vertexSize } from '$lib/stores.js';
+	import { domeSettings, domeData } from '$lib/stores.js';
 	import { MeshStandardMaterial, SphereGeometry, Vector3 } from 'three';
 	import { InstancedMesh } from '@threlte/core';
 	import { Instance } from '@threlte/core';
@@ -9,7 +9,7 @@
 </script>
 
 <InstancedMesh {geometry} {material}>
-	{#each $vertices as vertex}
-		<Instance position={new Vector3(...vertex)} scale={$vertexSize} color={0x444444} />
+	{#each $domeData.vertices as vertex}
+		<Instance position={new Vector3(...vertex)} scale={$domeSettings.vertexSize} color={0x444444} />
 	{/each}
 </InstancedMesh>
