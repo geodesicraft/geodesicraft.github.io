@@ -31,5 +31,8 @@
 		"three": "^0.148.0",
 		"vite": "^4.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"lucide-svelte": "^0.108.0"
+	}
 }

@@ -6,7 +6,7 @@
 </script>
 
 <Slider
-	name={domeSettingsParameters[selected].name}
+	title={domeSettingsParameters[selected].title}
 	bind:value={$domeSettings[selected]}
 	min={domeSettingsParameters[selected].min}
 	max={domeSettingsParameters[selected].max}

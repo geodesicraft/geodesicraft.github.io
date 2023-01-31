@@ -23,29 +23,32 @@ const mergeFromLocalStorage = function (name, defaults) {
 export const viewerSettingsParameters = {
 	axesOverlay: {
 		default: false,
-		name: 'Axes'
+		title: 'Axes Overlay',
+		icon: 'Axis3d'
 	},
 	darkMode: {
 		default: false,
-		name: 'Dark'
+		title: 'Dark Mode',
+		icon: 'Lightbulb'
 	},
 	autoRotate: {
 		default: true,
-		name: 'Rotate'
+		title: 'Auto Rotate',
+		icon: 'Rotate3d'
 	}
 };
 
 export const domeSettingsParameters = {
 	vertexSize: {
 		default: 0.15,
-		name: 'Vertex Size',
+		title: 'Vertex Size',
 		min: 0.05,
 		max: 1,
 		step: '0.001'
 	},
 	edgeThickness: {
 		default: 0.05,
-		name: 'Edge Thickness',
+		title: 'Edge Thickness',
 		min: 0.01,
 		max: 0.5,
 		step: 0.01

@@ -6,7 +6,7 @@
 <div>
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
 		<Slider
-			name={value.name}
+			title={value.title}
 			bind:value={$domeSettings[key]}
 			min={value.min}
 			max={value.max}

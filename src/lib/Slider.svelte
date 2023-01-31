@@ -1,5 +1,5 @@
 <script>
-	export let name;
+	export let title;
 	export let value;
 	export let min;
 	export let max;
@@ -8,7 +8,7 @@
 
 <label>
 	<div>
-		<span>{name}</span>
+		<span>{title}</span>
 		<input type="number" bind:value {min} {max} {step} />
 	</div>
 	<input type="range" bind:value {min} {max} {step} />

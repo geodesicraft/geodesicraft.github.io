@@ -1,11 +1,11 @@
 <script>
-	import Toggle from '$lib/Toggle.svelte';
+	import IconToggle from '$lib/IconToggle.svelte';
 	import { viewerSettings, viewerSettingsParameters } from '$lib/stores.js';
 </script>
 
 <div>
 	{#each Object.entries(viewerSettingsParameters) as [key, value] (key)}
-		<Toggle bind:checked={$viewerSettings[key]} name={value.name} />
+		<IconToggle bind:checked={$viewerSettings[key]} title={value.title} icon={value.icon} />
 	{/each}
 </div>
 
