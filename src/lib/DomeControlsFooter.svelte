@@ -1,18 +1,14 @@
 <script>
-	import { domeSettings, domeSettingsParameters } from '$lib/stores.js';
-	import Slider from '$lib/Slider.svelte';
+	import { domeSettingsParameters } from '$lib/stores.js';
+	import FooterControlSelector from './FooterControlSelector.svelte';
+	import FooterControl from './FooterControl.svelte';
+
+	let selected = Object.keys(domeSettingsParameters)[0];
 </script>
 
 <div>
-	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
-		<Slider
-			name={value.name}
-			bind:value={$domeSettings[key]}
-			min={value.min}
-			max={value.max}
-			step={value.step}
-		/>
-	{/each}
+	<FooterControlSelector bind:selected />
+	<FooterControl {selected} />
 </div>
 
 <style>
@@ -21,7 +17,6 @@
 		flex-direction: column;
 		gap: 1rem;
 		padding: 1rem;
-		height: 5rem;
 		background: #d3d3d3;
 		overflow: scroll;
 	}
