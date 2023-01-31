@@ -1,15 +1,16 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-const localStorageMerge = function (name, parameters) {
-	const defaults = Object.fromEntries(
-		Object.entries(parameters).map(([key, value]) => [key, value.default])
-	);
+const getDefaults = function (parameters) {
+	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
+};
+
+const mergeFromLocalStorage = function (name, defaults) {
 	if (!browser) return defaults;
 	const local = JSON.parse(window.localStorage.getItem(name));
 	if (local === null) return defaults;
 	let merged = {};
-	for (const [key, value] of Object.entries(parameters)) {
+	for (const key of Object.keys(defaults)) {
 		if (local[key] !== undefined) {
 			merged[key] = local[key];
 		} else {
@@ -35,7 +36,7 @@ const domeSettingsParameters = {
 };
 
 export const viewerSettings = writable(
-	localStorageMerge('viewerSettings', viewerSettingsParameters)
+	mergeFromLocalStorage('viewerSettings', getDefaults(viewerSettingsParameters))
 );
 viewerSettings.subscribe((value) => {
 	if (browser) {
@@ -43,7 +44,9 @@ viewerSettings.subscribe((value) => {
 	}
 });
 
-export const domeSettings = writable(localStorageMerge('domeSettings', domeSettingsParameters));
+export const domeSettings = writable(
+	mergeFromLocalStorage('domeSettings', getDefaults(domeSettingsParameters))
+);
 domeSettings.subscribe((value) => {
 	if (browser) {
 		window.localStorage.setItem('domeSettings', JSON.stringify(value));
