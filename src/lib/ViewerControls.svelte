@@ -4,13 +4,14 @@
 </script>
 
 <div class="clickthroughable">
-	<Toggle bind:checked={$autoRotate}>Rotate</Toggle>
 	<Toggle>Dark Mode</Toggle>
+	<Toggle bind:checked={$autoRotate}>Rotate</Toggle>
 </div>
 
 <style>
 	div {
 		display: flex;
+		justify-content: flex-end;
 		gap: 1rem;
 		padding: 1rem;
 	}

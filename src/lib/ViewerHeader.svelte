@@ -1,10 +1,17 @@
 <div class="clickthroughable">
-	<span>Geodesicraft</span>
+	<span class="clickthroughable">Geodesicraft</span>
 </div>
 
 <style>
+	div {
+		display: flex;
+		justify-content: flex-start;
+	}
+
 	span {
 		font-size: 1.3rem;
-		color: #444444;
+		font-weight: 600;
+		color: #777777;
+		margin: 1rem;
 	}
 </style>

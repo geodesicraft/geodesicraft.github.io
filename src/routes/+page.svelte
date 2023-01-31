@@ -7,8 +7,8 @@
 </script>
 
 <div>
-	<ViewerArea />
 	<Sidebar />
+	<ViewerArea />
 </div>
 
 <style lang="scss">
@@ -38,7 +38,7 @@
 
 	@media (min-width: ($sidebar-width * 2.5)) {
 		div {
-			grid-template-columns: 1fr $sidebar-width;
+			grid-template-columns: $sidebar-width 1fr;
 		}
 	}
 </style>
