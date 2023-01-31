@@ -1,16 +1,20 @@
 <script>
-	import Sidebar from '$lib/Sidebar.svelte';
 	import { createGeodesic } from '$lib/geodesic.js';
+	import DomeControlsSidebar from '$lib/DomeControlsSidebar.svelte';
 	import ViewerArea from '$lib/ViewerArea.svelte';
+	import DomeControlsFooter from '$lib/DomeControlsFooter.svelte';
 
 	createGeodesic();
 </script>
 
-<div>
+<div class="main">
 	<div class="sidebar">
-		<Sidebar />
+		<DomeControlsSidebar />
 	</div>
 	<ViewerArea />
+	<div class="footer">
+		<DomeControlsFooter />
+	</div>
 </div>
 
 <style lang="scss">
@@ -33,22 +37,35 @@
 		pointer-events: none;
 	}
 
-	div {
+	.main {
 		display: grid;
 		height: 100vh;
+	}
 
-		// large view
+	// wide view
+
+	.main {
 		grid-template-columns: $sidebar-width 1fr;
 	}
 
-	// mobile view
+	.footer {
+		display: none;
+	}
+
+	// narrow view
+
 	@media (max-width: ($sidebar-width * 2.5)) {
-		div {
+		.main {
 			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
 		}
 
 		.sidebar {
 			display: none;
+		}
+
+		.footer {
+			display: initial;
 		}
 	}
 </style>
