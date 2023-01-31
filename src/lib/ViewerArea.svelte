@@ -4,7 +4,7 @@
 </script>
 
 <div class="parent clickthroughable">
-	<div class="child clickthroughable"><DomeViewer /></div>
+	<div class="child"><DomeViewer /></div>
 	<div class="child clickthroughable"><ViewerOverlay /></div>
 </div>
 
