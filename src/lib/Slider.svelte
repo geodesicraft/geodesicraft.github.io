@@ -9,7 +9,7 @@
 <label>
 	<div>
 		<span>{name}</span>
-		<span>{value}</span>
+		<input type="number" bind:value {min} {max} {step} />
 	</div>
 	<input type="range" bind:value {min} {max} {step} />
 </label>
@@ -27,7 +27,11 @@
 		justify-content: space-between;
 	}
 
-	input {
+	input[type='range'] {
 		cursor: pointer;
+	}
+
+	input[type='number'] {
+		width: 4rem;
 	}
 </style>
