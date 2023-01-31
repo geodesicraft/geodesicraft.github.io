@@ -7,7 +7,9 @@
 </script>
 
 <div>
-	<Sidebar />
+	<div class="sidebar">
+		<Sidebar />
+	</div>
 	<ViewerArea />
 </div>
 
@@ -34,11 +36,19 @@
 	div {
 		display: grid;
 		height: 100vh;
+
+		// large view
+		grid-template-columns: $sidebar-width 1fr;
 	}
 
-	@media (min-width: ($sidebar-width * 2.5)) {
+	// mobile view
+	@media (max-width: ($sidebar-width * 2.5)) {
 		div {
-			grid-template-columns: $sidebar-width 1fr;
+			grid-template-columns: 1fr;
+		}
+
+		.sidebar {
+			display: none;
 		}
 	}
 </style>
