@@ -1,14 +1,24 @@
 <script>
-	import { domeSettings } from '$lib/stores.js';
+	import { domeSettings, domeSettingsParameters } from '$lib/stores.js';
 	import Slider from '$lib/Slider.svelte';
 </script>
 
 <div class="outer">
 	<div class="inner">
-		<Slider bind:value={$domeSettings.vertexSize} min="0" max="1" step="0.05">Vertex Size</Slider>
-		<Slider bind:value={$domeSettings.edgeThickness} min="0.01" max="0.5" step="0.01"
-			>Edge Thickness</Slider
-		>
+		<Slider
+			name={domeSettingsParameters.vertexSize.name}
+			bind:value={$domeSettings.vertexSize}
+			min={domeSettingsParameters.vertexSize.min}
+			max={domeSettingsParameters.vertexSize.max}
+			step={domeSettingsParameters.vertexSize.step}
+		/>
+		<Slider
+			name={domeSettingsParameters.vertexSize.name}
+			bind:value={$domeSettings.edgeThickness}
+			min={domeSettingsParameters.edgeThickness.min}
+			max={domeSettingsParameters.edgeThickness.max}
+			step={domeSettingsParameters.edgeThickness.step}
+		/>
 	</div>
 </div>
 

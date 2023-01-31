@@ -20,18 +20,26 @@ const mergeFromLocalStorage = function (name, defaults) {
 	return merged;
 };
 
-const viewerSettingsParameters = {
+export const viewerSettingsParameters = {
 	autoRotate: {
 		default: true
 	}
 };
 
-const domeSettingsParameters = {
+export const domeSettingsParameters = {
 	vertexSize: {
-		default: 0.15
+		default: 0.15,
+		name: 'Vertex Size',
+		min: 0,
+		max: 1,
+		step: 0.05
 	},
 	edgeThickness: {
-		default: 0.05
+		default: 0.05,
+		name: 'Edge Thickness',
+		min: 0.01,
+		max: 0.5,
+		step: 0.01
 	}
 };
 

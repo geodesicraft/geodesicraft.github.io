@@ -1,4 +1,5 @@
 <script>
+	export let name;
 	export let value;
 	export let min;
 	export let max;
@@ -6,7 +7,7 @@
 </script>
 
 <label>
-	<slot />
+	{name}
 	<input type="range" bind:value {min} {max} {step} />
 	{value}
 </label>
