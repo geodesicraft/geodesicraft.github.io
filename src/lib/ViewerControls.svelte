@@ -3,7 +3,7 @@
 	import { viewerSettings, viewerSettingsParameters } from '$lib/stores.js';
 </script>
 
-<div class="clickthroughable">
+<div>
 	{#each Object.entries(viewerSettingsParameters) as [key, value] (key)}
 		<Toggle bind:checked={$viewerSettings[key]} name={value.name} />
 	{/each}
@@ -12,8 +12,10 @@
 <style>
 	div {
 		display: flex;
-		justify-content: flex-end;
-		gap: 1rem;
-		padding: 1rem;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 0.6rem;
+		padding: 0.6rem;
+		border-bottom: 0.1rem solid #aaaaaa;
 	}
 </style>

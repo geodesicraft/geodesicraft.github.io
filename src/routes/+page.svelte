@@ -1,15 +1,15 @@
 <script>
 	import { createGeodesic } from '$lib/geodesic.js';
-	import DomeControlsSidebar from '$lib/DomeControlsSidebar.svelte';
 	import ViewerArea from '$lib/ViewerArea.svelte';
 	import DomeControlsFooter from '$lib/DomeControlsFooter.svelte';
+	import Sidebar from '$lib/Sidebar.svelte';
 
 	createGeodesic();
 </script>
 
 <div class="main">
 	<div class="sidebar">
-		<DomeControlsSidebar />
+		<Sidebar />
 	</div>
 	<ViewerArea />
 	<div class="footer">

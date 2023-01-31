@@ -12,7 +12,7 @@
 	label {
 		cursor: pointer;
 		user-select: none;
-		background: #d3d3d3;
+		background: #aaaaaa;
 		border-radius: 0.5rem;
 		padding: 0.6rem;
 		display: block;
