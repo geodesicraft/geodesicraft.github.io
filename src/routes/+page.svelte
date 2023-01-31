@@ -1,8 +1,9 @@
 <script>
 	import { createGeodesic } from '$lib/geodesic.js';
+	import Sidebar from '$lib/Sidebar.svelte';
+	import Header from '$lib/Header.svelte';
 	import ViewerArea from '$lib/ViewerArea.svelte';
 	import Footer from '$lib/Footer.svelte';
-	import Sidebar from '$lib/Sidebar.svelte';
 
 	createGeodesic();
 </script>
@@ -10,6 +11,9 @@
 <div class="main">
 	<div class="sidebar">
 		<Sidebar />
+	</div>
+	<div class="header">
+		<Header />
 	</div>
 	<ViewerArea />
 	<div class="footer">
@@ -49,6 +53,7 @@
 		grid-template-columns: $sidebar-width 1fr;
 	}
 
+	.header,
 	.footer {
 		display: none;
 	}
@@ -58,13 +63,14 @@
 	@media (max-width: ($sidebar-width * 2.5)) {
 		.main {
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr auto;
+			grid-template-rows: auto 1fr auto;
 		}
 
 		.sidebar {
 			display: none;
 		}
 
+		.header,
 		.footer {
 			display: initial;
 		}
