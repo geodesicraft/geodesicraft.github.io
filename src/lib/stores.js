@@ -30,9 +30,9 @@ export const domeSettingsParameters = {
 	vertexSize: {
 		default: 0.15,
 		name: 'Vertex Size',
-		min: 0,
+		min: 0.05,
 		max: 1,
-		step: 0.05
+		step: '0.001'
 	},
 	edgeThickness: {
 		default: 0.05,
