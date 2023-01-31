@@ -9,17 +9,20 @@ export function createGeodesic() {
 	const cartesianVertices = sphericalVertices.map((sphericalVertex) =>
 		sphericalToCartesian(...sphericalVertex)
 	);
-	domeData.vertices.set(cartesianVertices);
 
 	const sphericalEdges = icosahedron.sphericalEdges;
 	const cartesianEdges = sphericalEdges.map((sphericalEdge) =>
 		sphericalEdge.map((sphericalVertex) => sphericalToCartesian(...sphericalVertex))
 	);
-	domeData.edges.set(cartesianEdges);
 
 	const sphericalFaces = icosahedron.sphericalFaces;
 	const cartesianFaces = sphericalFaces.map((sphericalFace) =>
 		sphericalFace.map((sphericalVertex) => sphericalToCartesian(...sphericalVertex))
 	);
-	domeData.faces.set(cartesianFaces);
+
+	domeData.set({
+		vertices: cartesianVertices,
+		edges: cartesianEdges,
+		faces: cartesianFaces
+	});
 }
