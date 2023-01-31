@@ -1,7 +1,7 @@
 <script>
 	import { createGeodesic } from '$lib/geodesic.js';
 	import ViewerArea from '$lib/ViewerArea.svelte';
-	import DomeControlsFooter from '$lib/DomeControlsFooter.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import Sidebar from '$lib/Sidebar.svelte';
 
 	createGeodesic();
@@ -13,7 +13,7 @@
 	</div>
 	<ViewerArea />
 	<div class="footer">
-		<DomeControlsFooter />
+		<Footer />
 	</div>
 </div>
 
