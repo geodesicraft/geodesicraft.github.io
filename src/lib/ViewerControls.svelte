@@ -1,11 +1,16 @@
 <script>
 	import Toggle from '$lib/Toggle.svelte';
-	import { viewerSettings } from '$lib/stores.js';
+	import { viewerSettings, viewerSettingsParameters } from '$lib/stores.js';
 </script>
 
 <div class="clickthroughable">
-	<Toggle>Dark Mode</Toggle>
-	<Toggle bind:checked={$viewerSettings.autoRotate}>Rotate</Toggle>
+	<Toggle bind:checked={$viewerSettings.axesOverlay}
+		>{viewerSettingsParameters.axesOverlay.name}</Toggle
+	>
+	<Toggle bind:checked={$viewerSettings.darkMode}>{viewerSettingsParameters.darkMode.name}</Toggle>
+	<Toggle bind:checked={$viewerSettings.autoRotate}
+		>{viewerSettingsParameters.autoRotate.name}</Toggle
+	>
 </div>
 
 <style>

@@ -4,11 +4,12 @@
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
 	import { viewerSettings } from '$lib/stores.js';
+	import AxesOverlay from '$lib/AxesOverlay.svelte';
 </script>
 
 <div>
 	<Canvas>
-		<PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
+		<PerspectiveCamera position={{ y: 4, x: 4, z: 4 }}>
 			<OrbitControls autoRotate={$viewerSettings.autoRotate} enableZoom={true} />
 		</PerspectiveCamera>
 
@@ -17,6 +18,8 @@
 		<Edges />
 		<Vertices />
 		<Faces />
+
+		<AxesOverlay visible={$viewerSettings.axesOverlay} />
 	</Canvas>
 </div>
 
