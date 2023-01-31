@@ -6,6 +6,6 @@
 
 <select bind:value={selected}>
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
-		<option value={key}>{value.name}</option>
+		<option value={key}>{value.title}</option>
 	{/each}
 </select>
