@@ -1,18 +1,20 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-const defaultViewerSettings = {
-	autoRotate: true
+const viewerSettingsParameters = {
+	autoRotate: {
+		default: true
+	}
 };
 
 let mergedViewerSettings = {};
-
 if (browser) {
 	const localViewerSettings = JSON.parse(window.localStorage.getItem('viewerSettings'));
 	if (localViewerSettings !== null) {
-		for (const [key, value] of Object.entries(defaultViewerSettings)) {
+		for (const [key, value] of Object.entries(viewerSettingsParameters)) {
+			console.log(key, value);
 			if (localViewerSettings[key] === undefined) {
-				mergedViewerSettings[key] = value;
+				mergedViewerSettings[key] = value.default;
 			} else {
 				mergedViewerSettings[key] = localViewerSettings[key];
 			}
