@@ -1,9 +1,10 @@
 <script>
-	export let checked = false;
+	export let checked;
+	export let name;
 </script>
 
 <label>
-	<slot />
+	{name}
 	<input type="checkbox" bind:checked />
 </label>
 

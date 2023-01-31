@@ -4,13 +4,9 @@
 </script>
 
 <div class="clickthroughable">
-	<Toggle bind:checked={$viewerSettings.axesOverlay}
-		>{viewerSettingsParameters.axesOverlay.name}</Toggle
-	>
-	<Toggle bind:checked={$viewerSettings.darkMode}>{viewerSettingsParameters.darkMode.name}</Toggle>
-	<Toggle bind:checked={$viewerSettings.autoRotate}
-		>{viewerSettingsParameters.autoRotate.name}</Toggle
-	>
+	{#each Object.entries(viewerSettingsParameters) as [key, value] (key)}
+		<Toggle bind:checked={$viewerSettings[key]} name={value.name} />
+	{/each}
 </div>
 
 <style>
