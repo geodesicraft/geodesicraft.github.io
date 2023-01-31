@@ -16,4 +16,8 @@
 		padding: 0.6rem;
 		display: block;
 	}
+
+	input {
+		cursor: pointer;
+	}
 </style>
