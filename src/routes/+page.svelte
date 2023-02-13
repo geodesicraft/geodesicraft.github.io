@@ -8,6 +8,14 @@
 	createGeodesic();
 </script>
 
+<svelte:head>
+	<title>Geodesicraft</title>
+	<meta
+		name="description"
+		content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."
+	/>
+</svelte:head>
+
 <div class="main">
 	<div class="sidebar">
 		<Sidebar />
