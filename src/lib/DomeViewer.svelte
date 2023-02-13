@@ -1,5 +1,5 @@
 <script>
-	import { Canvas, DirectionalLight, OrbitControls, PerspectiveCamera } from '@threlte/core';
+	import { AmbientLight, Canvas, OrbitControls, PerspectiveCamera } from '@threlte/core';
 	import Edges from '$lib/Edges.svelte';
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
@@ -13,7 +13,7 @@
 			<OrbitControls autoRotate={$viewerSettings.autoRotate} enableZoom={true} />
 		</PerspectiveCamera>
 
-		<DirectionalLight position={{ y: 10 }} />
+		<AmbientLight color={0xffffff} intensity={1.0} />
 
 		<Edges />
 		<Vertices />
