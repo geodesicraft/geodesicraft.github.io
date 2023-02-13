@@ -5,6 +5,15 @@ const getDefaults = function (parameters) {
 	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
 };
 
+const getDarkModePreference = function (defaultValue) {
+	if (!browser) return defaultValue;
+	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
 const mergeFromLocalStorage = function (name, defaults) {
 	if (!browser) return defaults;
 	const local = JSON.parse(window.localStorage.getItem(name));
@@ -28,7 +37,7 @@ export const viewerSettingsParameters = {
 		default: false
 	},
 	darkMode: {
-		default: false
+		default: getDarkModePreference(false)
 	}
 };
 
