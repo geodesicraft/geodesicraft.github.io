@@ -24,7 +24,7 @@ export const viewerSettingsParameters = {
 	autoRotate: {
 		default: true
 	},
-	axesOverlay: {
+	axisOverlay: {
 		default: false
 	},
 	darkMode: {

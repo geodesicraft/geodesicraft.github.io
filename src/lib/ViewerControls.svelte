@@ -10,7 +10,7 @@
 	<IconToggle bind:checked={$viewerSettings.autoRotate} title="Auto Rotate">
 		<TablerRotate360 />
 	</IconToggle>
-	<IconToggle bind:checked={$viewerSettings.axesOverlay} title="Axes Overlay">
+	<IconToggle bind:checked={$viewerSettings.axisOverlay} title="Axis Overlay">
 		<MdiAxisArrow />
 	</IconToggle>
 	<IconToggle bind:checked={$viewerSettings.darkMode} title="Dark Mode">

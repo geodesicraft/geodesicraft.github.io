@@ -4,7 +4,7 @@
 	import Vertices from '$lib/Vertices.svelte';
 	import Faces from '$lib/Faces.svelte';
 	import { viewerSettings } from '$lib/stores.js';
-	import AxesOverlay from '$lib/AxesOverlay.svelte';
+	import AxisOverlay from '$lib/AxisOverlay.svelte';
 </script>
 
 <div>
@@ -19,7 +19,7 @@
 		<Vertices />
 		<Faces />
 
-		<AxesOverlay visible={$viewerSettings.axesOverlay} />
+		<AxisOverlay visible={$viewerSettings.axisOverlay} />
 	</Canvas>
 </div>
 
