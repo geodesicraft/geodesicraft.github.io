@@ -1,8 +1,12 @@
 {
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
 	"[svelte]": {
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "svelte.svelte-vscode"
-	}
+	},
+	"tailwindCSS.emmetCompletions": true
 }
