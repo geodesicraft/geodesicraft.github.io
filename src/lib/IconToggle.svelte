@@ -1,14 +1,11 @@
 <script>
-	import Icon from './Icon.svelte';
-
 	export let checked;
 	export let title;
-	export let icon;
 </script>
 
 <label {title} class:selected={checked}>
 	<input type="checkbox" bind:checked />
-	<Icon {icon} />
+	<slot />
 </label>
 
 <style>

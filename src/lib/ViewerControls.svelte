@@ -1,12 +1,21 @@
 <script>
 	import IconToggle from '$lib/IconToggle.svelte';
-	import { viewerSettings, viewerSettingsParameters } from '$lib/stores.js';
+	import { viewerSettings } from '$lib/stores.js';
+	import TablerRotate360 from '~icons/tabler/rotate-360';
+	import MdiAxisArrow from '~icons/mdi/axis-arrow';
+	import TablerSunMoon from '~icons/tabler/sun-moon';
 </script>
 
 <div>
-	{#each Object.entries(viewerSettingsParameters) as [key, value] (key)}
-		<IconToggle bind:checked={$viewerSettings[key]} title={value.title} icon={value.icon} />
-	{/each}
+	<IconToggle bind:checked={$viewerSettings.autoRotate} title="Auto Rotate">
+		<TablerRotate360 />
+	</IconToggle>
+	<IconToggle bind:checked={$viewerSettings.axesOverlay} title="Axes Overlay">
+		<MdiAxisArrow />
+	</IconToggle>
+	<IconToggle bind:checked={$viewerSettings.darkMode} title="Dark Mode">
+		<TablerSunMoon />
+	</IconToggle>
 </div>
 
 <style>

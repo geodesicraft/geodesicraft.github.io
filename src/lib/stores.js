@@ -21,20 +21,14 @@ const mergeFromLocalStorage = function (name, defaults) {
 };
 
 export const viewerSettingsParameters = {
+	autoRotate: {
+		default: true
+	},
 	axesOverlay: {
-		default: false,
-		title: 'Axes Overlay',
-		icon: 'Axis3d'
+		default: false
 	},
 	darkMode: {
-		default: false,
-		title: 'Dark Mode',
-		icon: 'Lightbulb'
-	},
-	autoRotate: {
-		default: true,
-		title: 'Auto Rotate',
-		icon: 'Rotate3d'
+		default: false
 	}
 };
 
