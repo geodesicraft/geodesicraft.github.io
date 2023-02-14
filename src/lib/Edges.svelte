@@ -4,13 +4,16 @@
 	import { domeSettings, domeData } from '$lib/stores.js';
 </script>
 
-{#each $domeData.edges as edge}
+{#each $domeData.edgesReference as edgeReference}
 	<Line2
 		material={new LineMaterial({
 			worldUnits: true,
 			linewidth: $domeSettings.edgeThickness,
 			color: 0x555555
 		})}
-		points={[$domeData.vertices[edge[0]], $domeData.vertices[edge[1]]]}
+		points={[
+			$domeData.verticesCoordinates[edgeReference[0]],
+			$domeData.verticesCoordinates[edgeReference[1]]
+		]}
 	/>
 {/each}

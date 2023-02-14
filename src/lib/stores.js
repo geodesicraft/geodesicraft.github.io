@@ -82,7 +82,7 @@ viewerSettings.subscribe((value) => {
 });
 
 export const domeData = writable({
-	edges: [],
-	vertices: [],
-	faces: []
+	verticesCoordinates: [],
+	edgesReference: [],
+	facesReference: []
 });

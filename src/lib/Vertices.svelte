@@ -9,7 +9,11 @@
 </script>
 
 <InstancedMesh {geometry} {material}>
-	{#each $domeData.vertices as vertex}
-		<Instance position={new Vector3(...vertex)} scale={$domeSettings.vertexSize} color={0x444444} />
+	{#each $domeData.verticesCoordinates as vertexCoordinates}
+		<Instance
+			position={new Vector3(...vertexCoordinates)}
+			scale={$domeSettings.vertexSize}
+			color={0x444444}
+		/>
 	{/each}
 </InstancedMesh>

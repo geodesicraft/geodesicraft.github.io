@@ -10,13 +10,13 @@ export function createGeodesic() {
 		sphericalToCartesian(...sphericalVertex)
 	);
 
-	const edgesReferences = icosahedron.sphericalEdges;
+	const edgesReference = icosahedron.sphericalEdges;
 
-	const facesReferences = icosahedron.sphericalFaces;
+	const facesReference = icosahedron.sphericalFaces;
 
 	domeData.set({
-		vertices: cartesianVertices,
-		edges: edgesReferences,
-		faces: facesReferences
+		verticesCoordinates: cartesianVertices,
+		edgesReference,
+		facesReference
 	});
 }

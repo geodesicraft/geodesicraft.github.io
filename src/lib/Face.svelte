@@ -2,10 +2,14 @@
 	import { Mesh } from '@threlte/core';
 	import { BufferAttribute, BufferGeometry, DoubleSide, MeshLambertMaterial } from 'three';
 
-	export let face;
+	export let faceCoordinates;
 
 	const geometry = new BufferGeometry();
-	const verticesMatrix = new Float32Array([...face[0], ...face[1], ...face[2]]);
+	const verticesMatrix = new Float32Array([
+		...faceCoordinates[0],
+		...faceCoordinates[1],
+		...faceCoordinates[2]
+	]);
 	geometry.setAttribute('position', new BufferAttribute(verticesMatrix, 3));
 
 	const material = new MeshLambertMaterial({
