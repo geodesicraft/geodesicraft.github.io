@@ -3,14 +3,13 @@
 	import DomeControlsSidebar from '$lib/DomeControlsSidebar.svelte';
 </script>
 
-<div>
+<div class="bg-zinc-200 dark:bg-zinc-700">
 	<ViewerControls />
 	<DomeControlsSidebar />
 </div>
 
 <style>
 	div {
-		background: #d3d3d3;
 		height: 100vh;
 		display: grid;
 		grid-template-rows: auto 1fr;

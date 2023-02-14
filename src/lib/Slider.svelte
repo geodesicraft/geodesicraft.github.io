@@ -6,10 +6,10 @@
 	export let step;
 </script>
 
-<label>
+<label class="bg-zinc-400 dark:bg-zinc-800 dark:text-zinc-100">
 	<div>
 		<span>{title}</span>
-		<input type="number" bind:value {min} {max} {step} />
+		<input type="number" bind:value {min} {max} {step} class="bg-zinc-200 dark:bg-zinc-600" />
 	</div>
 	<input type="range" bind:value {min} {max} {step} />
 </label>
@@ -17,7 +17,6 @@
 <style>
 	label {
 		display: grid;
-		background: #aaaaaa;
 		border-radius: 0.5rem;
 		padding: 0.5rem;
 	}

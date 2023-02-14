@@ -3,7 +3,7 @@
 	export let title;
 </script>
 
-<label {title} class:selected={checked}>
+<label {title} class:selected={checked} class="bg-zinc-400 dark:bg-zinc-800 dark:text-zinc-100">
 	<input type="checkbox" bind:checked />
 	<slot />
 </label>
@@ -12,7 +12,6 @@
 	label {
 		cursor: pointer;
 		user-select: none;
-		background: #aaaaaa;
 		border-radius: 0.5rem;
 		padding: 0.6rem;
 		display: block;
@@ -20,7 +19,6 @@
 
 	.selected {
 		background: #228bee;
-		box-shadow: inset 0 0 0 0.2rem #333333;
 	}
 
 	input {

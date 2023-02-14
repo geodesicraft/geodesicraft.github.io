@@ -16,7 +16,7 @@
 	/>
 </svelte:head>
 
-<div class="main dark:bg-black">
+<div class="main bg-zinc-100 dark:bg-zinc-600">
 	<div class="sidebar">
 		<Sidebar />
 	</div>

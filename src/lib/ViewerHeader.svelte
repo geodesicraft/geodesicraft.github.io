@@ -1,5 +1,5 @@
 <div class="clickthroughable">
-	<span class="clickthroughable">Geodesicraft</span>
+	<span class="clickthroughable text-zinc-500 dark:text-zinc-300">Geodesicraft</span>
 </div>
 
 <style>
@@ -11,7 +11,6 @@
 	span {
 		font-size: 1.3rem;
 		font-weight: 600;
-		color: #777777;
 		margin: 1rem;
 	}
 </style>
