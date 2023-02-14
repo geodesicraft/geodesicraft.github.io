@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@dimforge/rapier3d-compat": "^0.11.1",
 		"@iconify-json/gis": "^1.1.6",
+		"@iconify-json/ic": "^1.1.13",
 		"@iconify-json/lucide": "^1.1.61",
 		"@iconify-json/mdi": "^1.1.47",
 		"@iconify-json/tabler": "^1.1.60",
