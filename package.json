@@ -31,7 +31,6 @@
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
-		"sass": "^1.57.1",
 		"svelte": "^3.54.0",
 		"svelte-preprocess": "^5.0.1",
 		"svelte-sequential-preprocessor": "^0.0.7",

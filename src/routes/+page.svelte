@@ -33,7 +33,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	:global(.clickthroughable > *) {
 		pointer-events: auto;
 	}
