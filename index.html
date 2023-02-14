@@ -7,14 +7,14 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout-41b6677d.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/_page-e68c2cdd.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-b79015e6.js">
+		<link rel="modulepreload" href="./_app/immutable/start-6bccc6f0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-9a7f566f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-64cb71f3.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-083a2823.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores-10fe7ac6.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-88b6d07d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores-098e6391.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-5612100c.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-79cb23d1.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-542e7b6b.js"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-7ebe0e44.js"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -29,7 +29,11 @@
 	<svg viewBox="0 0 24 24" width="1.2em" height="1.2em"><!-- HTML_TAG_START --><path fill="currentColor" d="m12 2l4 4h-3v7.85l6.53 3.76L21 15.03l1.5 5.47l-5.5 1.46l1.53-2.61L12 15.58l-6.53 3.77L7 21.96L1.5 20.5L3 15.03l1.47 2.58L11 13.85V6H8l4-4Z"/><!-- HTML_TAG_END --></svg></label>
 	<label title="Light Mode" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 !bg-blue-500"><input type="checkbox" class="cursor-pointer hidden" checked>
 	<svg viewBox="0 0 24 24" width="1.2em" height="1.2em"><!-- HTML_TAG_START --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 18h6m-5 4h4m1.09-8c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8A6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/><!-- HTML_TAG_END --></svg></label></div>
-	<div class="bg-zinc-300 dark:bg-zinc-700 flex flex-col gap-3 p-3 overflow-auto border-t-2 border-zinc-100 dark:border-zinc-600"><div class="bg-zinc-400 dark:bg-zinc-800 rounded-lg"><label class="grid p-3 gap-4 tracking-wide text-zinc-900 dark:text-zinc-100"><div class="flex justify-between items-center gap-4">Vertex Size
+	<div class="bg-zinc-300 dark:bg-zinc-700 flex flex-col gap-3 p-3 overflow-auto border-t-2 border-zinc-100 dark:border-zinc-600"><div class="bg-zinc-400 dark:bg-zinc-800 rounded-lg"><label class="grid p-3 gap-4 tracking-wide text-zinc-900 dark:text-zinc-100"><div class="flex justify-between items-center gap-4">Subdivisions
+			
+		<input type="number" min="0" max="10" step="1" class="w-20 p-1.5 rounded font-mono bg-zinc-300 dark:bg-zinc-600" value="1"></div>
+	<input type="range" min="0" max="10" step="1" class="cursor-pointer" value="1"></label>
+		</div><div class="bg-zinc-400 dark:bg-zinc-800 rounded-lg"><label class="grid p-3 gap-4 tracking-wide text-zinc-900 dark:text-zinc-100"><div class="flex justify-between items-center gap-4">Vertex Size
 			
 		<input type="number" min="0.05" max="1" step="0.001" class="w-20 p-1.5 rounded font-mono bg-zinc-300 dark:bg-zinc-600" value="0.15"></div>
 	<input type="range" min="0.05" max="1" step="0.001" class="cursor-pointer" value="0.15"></label>
@@ -48,20 +52,20 @@
 	<div class="clickthroughable grid grid-cols-1 overflow-hidden"><div class="overflow-hidden row-start-1 col-start-1"><div class="h-full cursor-grab"><canvas class="svelte-o3oskp">
 </canvas></div></div>
 	<div class="clickthroughable overflow-hidden row-start-1 col-start-1"><div class="clickthroughable grid h-full content-between"><div class="clickthroughable flex justify-start"><span class="clickthroughable text-zinc-500 dark:text-zinc-300 text-lg tracking-wide mx-5 my-3">Geodesicraft</span></div></div></div></div>
-	<div class="md:hidden"><div><div class="bg-zinc-300 dark:bg-zinc-700 p-5"><label class="grid p-3 gap-4 tracking-wide text-zinc-900 dark:text-zinc-100"><div class="flex justify-between items-center gap-4"><select class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer p-2 rounded-lg tracking-wide w-full"><option value="vertexSize">Vertex Size</option><option value="edgeThickness">Edge Thickness</option></select>
-		<input type="number" min="0.05" max="1" step="0.001" class="w-20 p-1.5 rounded font-mono bg-zinc-400 dark:bg-zinc-800" value="0.15"></div>
-	<input type="range" min="0.05" max="1" step="0.001" class="cursor-pointer" value="0.15"></label></div></div></div>
+	<div class="md:hidden"><div><div class="bg-zinc-300 dark:bg-zinc-700 p-5"><label class="grid p-3 gap-4 tracking-wide text-zinc-900 dark:text-zinc-100"><div class="flex justify-between items-center gap-4"><select class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer p-2 rounded-lg tracking-wide w-full"><option value="subdivisions">Subdivisions</option><option value="vertexSize">Vertex Size</option><option value="edgeThickness">Edge Thickness</option></select>
+		<input type="number" min="0" max="10" step="1" class="w-20 p-1.5 rounded font-mono bg-zinc-400 dark:bg-zinc-800" value="1"></div>
+	<input type="range" min="0" max="10" step="1" class="cursor-pointer" value="1"></label></div></div></div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="t6rx5g">
-			import { start } from "./_app/immutable/start-b79015e6.js";
+		<script type="module" data-sveltekit-hydrate="y4bhwp">
+			import { start } from "./_app/immutable/start-6bccc6f0.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="t6rx5g"]').parentNode,
-				version: "1676364269137",
+				target: document.querySelector('[data-sveltekit-hydrate="y4bhwp"]').parentNode,
+				version: "1676370806646",
 				hydrate: {
 					node_ids: [0, 2],
 					data: [null,null],
