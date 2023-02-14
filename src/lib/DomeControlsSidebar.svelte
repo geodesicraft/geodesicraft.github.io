@@ -3,9 +3,7 @@
 	import Slider from '$lib/Slider.svelte';
 </script>
 
-<div
-	class="bg-zinc-300 dark:bg-zinc-700 overflow-scroll flex flex-col gap-3 p-3 border-t-2 border-zinc-100 dark:border-zinc-600"
->
+<div class="bg-zinc-300 dark:bg-zinc-700 overflow-scroll flex flex-col gap-3 p-3">
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
 		<div class="bg-zinc-400 dark:bg-zinc-800 rounded-lg">
 			<Slider
