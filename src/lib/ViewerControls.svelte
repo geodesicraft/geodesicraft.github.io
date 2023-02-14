@@ -6,7 +6,7 @@
 	import TablerSunMoon from '~icons/tabler/sun-moon';
 </script>
 
-<div>
+<div class="border-b-2 border-zinc-100 dark:border-zinc-600">
 	<IconToggle bind:checked={$viewerSettings.autoRotate} title="Auto Rotate">
 		<TablerRotate360 />
 	</IconToggle>
@@ -25,6 +25,5 @@
 		justify-content: space-around;
 		gap: 0.6rem;
 		padding: 0.6rem;
-		border-bottom: 0.1rem solid #aaaaaa;
 	}
 </style>

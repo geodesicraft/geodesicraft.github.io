@@ -14,7 +14,6 @@
 	};
 
 	$: setDarkMode($viewerSettings.darkMode);
-	$: console.log('darkMode', $viewerSettings.darkMode);
 </script>
 
 <slot />
