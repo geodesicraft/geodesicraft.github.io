@@ -30,12 +30,19 @@ const mergeFromLocalStorage = function (name, defaults) {
 };
 
 export const domeSettingsParameters = {
+	subdivisions: {
+		default: 1,
+		title: 'Subdivisions',
+		min: 0,
+		max: 10,
+		step: 1
+	},
 	vertexSize: {
 		default: 0.15,
 		title: 'Vertex Size',
 		min: 0.05,
 		max: 1,
-		step: '0.001'
+		step: 0.001
 	},
 	edgeThickness: {
 		default: 0.05,

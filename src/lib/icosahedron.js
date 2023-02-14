@@ -19,7 +19,7 @@ export const createIcosahedron = function () {
 			// bottom
 			[1, Math.PI, 0]
 		],
-		sphericalEdges: [
+		edgesReference: [
 			// zig zag ring
 			[0, 1],
 			[1, 2],
@@ -56,7 +56,7 @@ export const createIcosahedron = function () {
 			[11, 7],
 			[11, 9]
 		],
-		sphericalFaces: [
+		facesReference: [
 			// ring
 			[0, 1, 2],
 			[1, 2, 3],
