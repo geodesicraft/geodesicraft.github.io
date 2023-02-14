@@ -1,6 +1,6 @@
 <script>
 	import IconToggle from '$lib/IconToggle.svelte';
-	import IconLink from './IconLink.svelte';
+	import IconLink from '$lib/IconLink.svelte';
 	import { viewerSettings } from '$lib/stores.js';
 	import IcBaselineQuestionMark from '~icons/ic/baseline-question-mark';
 	import TablerRotate360 from '~icons/tabler/rotate-360';

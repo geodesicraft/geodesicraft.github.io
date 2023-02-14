@@ -29,18 +29,6 @@ const mergeFromLocalStorage = function (name, defaults) {
 	return merged;
 };
 
-export const viewerSettingsParameters = {
-	autoRotate: {
-		default: true
-	},
-	axisOverlay: {
-		default: false
-	},
-	lightMode: {
-		default: getLightModePreference(true)
-	}
-};
-
 export const domeSettingsParameters = {
 	vertexSize: {
 		default: 0.15,
@@ -58,21 +46,38 @@ export const domeSettingsParameters = {
 	}
 };
 
-export const viewerSettings = writable(
-	mergeFromLocalStorage('viewerSettings', getDefaults(viewerSettingsParameters))
-);
-viewerSettings.subscribe((value) => {
-	if (browser) {
-		window.localStorage.setItem('viewerSettings', JSON.stringify(value));
-	}
-});
-
 export const domeSettings = writable(
 	mergeFromLocalStorage('domeSettings', getDefaults(domeSettingsParameters))
 );
+
 domeSettings.subscribe((value) => {
 	if (browser) {
 		window.localStorage.setItem('domeSettings', JSON.stringify(value));
+	}
+});
+
+export const viewerSettingsParameters = {
+	autoRotate: {
+		default: true
+	},
+	axisOverlay: {
+		default: false
+	},
+	lightMode: {
+		default: getLightModePreference(true)
+	},
+	selectedDomeSetting: {
+		default: Object.keys(domeSettingsParameters)[0]
+	}
+};
+
+export const viewerSettings = writable(
+	mergeFromLocalStorage('viewerSettings', getDefaults(viewerSettingsParameters))
+);
+
+viewerSettings.subscribe((value) => {
+	if (browser) {
+		window.localStorage.setItem('viewerSettings', JSON.stringify(value));
 	}
 });
 
