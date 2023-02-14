@@ -33,6 +33,7 @@ export const domeSettingsParameters = {
 	subdivisions: {
 		default: 1,
 		title: 'Subdivisions',
+		argument: 'sd',
 		min: 0,
 		max: 10,
 		step: 1
@@ -40,6 +41,7 @@ export const domeSettingsParameters = {
 	vertexSize: {
 		default: 0.15,
 		title: 'Vertex Size',
+		argument: 'vs',
 		min: 0.05,
 		max: 1,
 		step: 0.001
@@ -47,6 +49,7 @@ export const domeSettingsParameters = {
 	edgeThickness: {
 		default: 0.05,
 		title: 'Edge Thickness',
+		argument: 'et',
 		min: 0.01,
 		max: 0.5,
 		step: 0.01
