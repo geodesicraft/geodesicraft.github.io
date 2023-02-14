@@ -1,6 +1,6 @@
 import { domeData } from '$lib/stores.js';
 import { sphericalToCartesian } from '$lib/sphericalToCartesian.js';
-import { createIcosahedron } from '$lib/icosahedron';
+import { createIcosahedron } from '$lib/icosahedron.js';
 
 export function createGeodesic() {
 	const icosahedron = createIcosahedron();
