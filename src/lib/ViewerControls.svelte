@@ -8,9 +8,7 @@
 	import LucideLightbulb from '~icons/lucide/lightbulb';
 </script>
 
-<div
-	class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"
->
+<div class="bg-zinc-300 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around">
 	<IconLink href="https://github.com/geodesicraft" title="About">
 		<IcBaselineQuestionMark />
 	</IconLink>
