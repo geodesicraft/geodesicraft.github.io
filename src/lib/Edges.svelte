@@ -11,6 +11,6 @@
 			linewidth: $domeSettings.edgeThickness,
 			color: 0x555555
 		})}
-		points={edge}
+		points={[$domeData.vertices[edge[0]], $domeData.vertices[edge[1]]]}
 	/>
 {/each}
