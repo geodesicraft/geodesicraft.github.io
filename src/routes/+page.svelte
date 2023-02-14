@@ -16,8 +16,6 @@
 	/>
 </svelte:head>
 
-<svelte:body class="m-0 p-0 overflow-hidden font-sans" />
-
 <div
 	class="bg-zinc-100 dark:bg-zinc-600 grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto] md:grid-cols-[auto_1fr]"
 >
@@ -34,6 +32,10 @@
 </div>
 
 <style>
+	:global(body) {
+		overflow: hidden;
+	}
+
 	:global(.clickthroughable > *) {
 		pointer-events: auto;
 	}
