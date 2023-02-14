@@ -16,19 +16,19 @@
 	/>
 </svelte:head>
 
-<svelte:body class="m-0 p-0 overflow-hidden font-sans " />
+<svelte:body class="m-0 p-0 overflow-hidden font-sans" />
 
 <div
-	class="main bg-zinc-100 dark:bg-zinc-600 grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto] md:grid-cols-[auto_1fr]"
+	class="bg-zinc-100 dark:bg-zinc-600 grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto] md:grid-cols-[auto_1fr]"
 >
-	<div class="sidebar h-screen max-md:hidden">
+	<div class="h-screen max-md:hidden">
 		<Sidebar />
 	</div>
-	<div class="header md:hidden">
+	<div class="md:hidden">
 		<Header />
 	</div>
 	<ViewerArea />
-	<div class="footer md:hidden">
+	<div class="md:hidden">
 		<Footer />
 	</div>
 </div>
