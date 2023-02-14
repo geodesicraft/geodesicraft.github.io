@@ -6,3 +6,4 @@ export const sphericalToCartesian = function (rho, theta, phi) {
 	return [x, y, z];
 };
 // https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates
+// This formula is modified so x, y, z is consistent with Minecraft and Three.js
