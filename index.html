@@ -5,16 +5,16 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-61ec95bc.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page-07ab690b.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-6681544d.js">
+		<link href="./_app/immutable/assets/_layout-7fe24029.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-7670650b.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-9a695494.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-9a7f566f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-64cb71f3.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-f7439439.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-4db73543.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/stores-e283e5c8.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-5612100c.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-79cb23d1.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-e9d299e6.js"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-a7aca32a.js"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -22,7 +22,9 @@
 
 
 
-<div class="main bg-zinc-100 dark:bg-zinc-600 grid h-screen svelte-x4m6xv"><div class="sidebar svelte-x4m6xv"><div class="h-full grid grid-rows-[auto_1fr] overflow-hidden"><div class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"><label title="Auto Rotate" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g selected"><input type="checkbox" class="cursor-pointer hidden" checked>
+
+
+<div class="main bg-zinc-100 dark:bg-zinc-600 grid h-screen grid-cols-1 grid-rows-[auto_1fr_auto] md:grid-cols-[auto_1fr]"><div class="sidebar h-screen max-md:hidden"><div class="h-full grid grid-rows-[auto_1fr] overflow-hidden w-72"><div class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"><label title="Auto Rotate" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g selected"><input type="checkbox" class="cursor-pointer hidden" checked>
 	<svg viewBox="0 0 24 24" width="1.2em" height="1.2em"><!-- HTML_TAG_START --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 16h4v4"/><path d="M19.458 11.042c.86-2.366.722-4.58-.6-5.9c-2.272-2.274-7.185-1.045-10.973 2.743c-3.788 3.788-5.017 8.701-2.744 10.974c2.227 2.226 6.987 1.093 10.74-2.515"/></g><!-- HTML_TAG_END --></svg>
 </label>
 	<label title="Axis Overlay" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g"><input type="checkbox" class="cursor-pointer hidden">
@@ -36,7 +38,7 @@
 	<input type="range" min="0.05" max="1" step="0.001" class="cursor-pointer" value="0.15"></label><label class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 grid p-3 rounded-lg gap-2 tracking-wide"><div class="flex justify-between items-center"><span>Edge Thickness</span>
 		<input type="number" min="0.01" max="0.5" step="0.01" class="bg-zinc-200 dark:bg-zinc-600 w-20 p-1 rounded font-mono" value="0.05"></div>
 	<input type="range" min="0.01" max="0.5" step="0.01" class="cursor-pointer" value="0.05"></label></div></div></div>
-	<div class="header svelte-x4m6xv"><div><div class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"><label title="Auto Rotate" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g selected"><input type="checkbox" class="cursor-pointer hidden" checked>
+	<div class="header md:hidden"><div><div class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"><label title="Auto Rotate" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g selected"><input type="checkbox" class="cursor-pointer hidden" checked>
 	<svg viewBox="0 0 24 24" width="1.2em" height="1.2em"><!-- HTML_TAG_START --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 16h4v4"/><path d="M19.458 11.042c.86-2.366.722-4.58-.6-5.9c-2.272-2.274-7.185-1.045-10.973 2.743c-3.788 3.788-5.017 8.701-2.744 10.974c2.227 2.226 6.987 1.093 10.74-2.515"/></g><!-- HTML_TAG_END --></svg>
 </label>
 	<label title="Axis Overlay" class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer select-none rounded-lg p-3.5 svelte-1ake67g"><input type="checkbox" class="cursor-pointer hidden">
@@ -48,21 +50,21 @@
 	<div class="clickthroughable grid grid-cols-1 overflow-hidden"><div class="overflow-hidden row-start-1 col-start-1"><div class="h-full cursor-grab"><canvas class="svelte-o3oskp">
 </canvas></div></div>
 	<div class="clickthroughable overflow-hidden row-start-1 col-start-1"><div class="clickthroughable grid h-full content-between"><div class="clickthroughable flex justify-start"><span class="clickthroughable text-zinc-500 dark:text-zinc-300 text-lg tracking-wide m-4">Geodesicraft</span></div></div></div></div>
-	<div class="footer svelte-x4m6xv"><div><div class="flex flex-col bg-zinc-200 dark:bg-zinc-700 gap-4 p-4"><select class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer p-2 rounded-lg tracking-wide"><option value="vertexSize">Vertex Size</option><option value="edgeThickness">Edge Thickness</option></select>
+	<div class="footer md:hidden"><div><div class="flex flex-col bg-zinc-200 dark:bg-zinc-700 gap-4 p-4"><select class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 cursor-pointer p-2 rounded-lg tracking-wide"><option value="vertexSize">Vertex Size</option><option value="edgeThickness">Edge Thickness</option></select>
 	<label class="bg-zinc-400 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 grid p-3 rounded-lg gap-2 tracking-wide"><div class="flex justify-between items-center"><span>Vertex Size</span>
 		<input type="number" min="0.05" max="1" step="0.001" class="bg-zinc-200 dark:bg-zinc-600 w-20 p-1 rounded font-mono" value="0.15"></div>
 	<input type="range" min="0.05" max="1" step="0.001" class="cursor-pointer" value="0.15"></label></div></div></div>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1qvxkx8">
-			import { start } from "./_app/immutable/start-6681544d.js";
+		<script type="module" data-sveltekit-hydrate="7vmmy1">
+			import { start } from "./_app/immutable/start-9a695494.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1qvxkx8"]').parentNode,
-				version: "1676340595535",
+				target: document.querySelector('[data-sveltekit-hydrate="7vmmy1"]').parentNode,
+				version: "1676342986680",
 				hydrate: {
 					node_ids: [0, 2],
 					data: [null,null],
