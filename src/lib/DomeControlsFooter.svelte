@@ -6,15 +6,13 @@
 	let selected = Object.keys(domeSettingsParameters)[0];
 </script>
 
-<div>
+<div class="flex flex-col bg-zinc-200 dark:bg-zinc-700">
 	<FooterControlSelector bind:selected />
 	<FooterControl {selected} />
 </div>
 
 <style>
 	div {
-		display: flex;
-		flex-direction: column;
 		gap: 1rem;
 		padding: 1rem;
 	}

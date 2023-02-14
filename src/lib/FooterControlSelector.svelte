@@ -4,7 +4,7 @@
 	export let selected;
 </script>
 
-<select bind:value={selected}>
+<select bind:value={selected} class="bg-zinc-400 dark:bg-zinc-800 dark:text-zinc-100">
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
 		<option value={key}>{value.title}</option>
 	{/each}

@@ -3,7 +3,7 @@
 	import DomeControlsSidebar from '$lib/DomeControlsSidebar.svelte';
 </script>
 
-<div class="bg-zinc-200 dark:bg-zinc-700">
+<div>
 	<ViewerControls />
 	<DomeControlsSidebar />
 </div>

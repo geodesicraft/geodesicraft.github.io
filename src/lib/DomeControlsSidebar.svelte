@@ -3,7 +3,7 @@
 	import Slider from '$lib/Slider.svelte';
 </script>
 
-<div>
+<div class="bg-zinc-200 dark:bg-zinc-700">
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
 		<Slider
 			title={value.title}
