@@ -16,7 +16,7 @@
 	/>
 </svelte:head>
 
-<div class="main">
+<div class="main dark:bg-black">
 	<div class="sidebar">
 		<Sidebar />
 	</div>
