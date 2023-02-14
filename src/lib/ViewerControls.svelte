@@ -18,10 +18,7 @@
 	<IconToggle bind:checked={$viewerSettings.axisOverlay} title="Axis Overlay">
 		<MdiAxisArrow />
 	</IconToggle>
-	<IconToggle
-		bind:checked={$viewerSettings.lightMode}
-		title={$viewerSettings.lightMode ? 'Dark Mode' : 'Light Mode'}
-	>
+	<IconToggle bind:checked={$viewerSettings.lightMode} title="Light Mode">
 		<LucideLightbulb />
 	</IconToggle>
 </div>
