@@ -3,17 +3,17 @@
 	import { viewerSettings } from '$lib/stores.js';
 	import { browser } from '$app/environment';
 
-	const setDarkMode = function (darkMode) {
+	const setLightMode = function (lightMode) {
 		if (!browser) return;
 
-		if (darkMode) {
-			document.documentElement.classList.add('dark');
-		} else {
+		if (lightMode) {
 			document.documentElement.classList.remove('dark');
+		} else {
+			document.documentElement.classList.add('dark');
 		}
 	};
 
-	$: setDarkMode($viewerSettings.darkMode);
+	$: setLightMode($viewerSettings.lightMode);
 </script>
 
 <slot />

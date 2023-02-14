@@ -2,10 +2,10 @@
 	import IconToggle from '$lib/IconToggle.svelte';
 	import IconLink from './IconLink.svelte';
 	import { viewerSettings } from '$lib/stores.js';
+	import IcBaselineQuestionMark from '~icons/ic/baseline-question-mark';
 	import TablerRotate360 from '~icons/tabler/rotate-360';
 	import MdiAxisArrow from '~icons/mdi/axis-arrow';
-	import TablerSunMoon from '~icons/tabler/sun-moon';
-	import IcBaselineQuestionMark from '~icons/ic/baseline-question-mark';
+	import LucideLightbulb from '~icons/lucide/lightbulb';
 </script>
 
 <div
@@ -20,7 +20,10 @@
 	<IconToggle bind:checked={$viewerSettings.axisOverlay} title="Axis Overlay">
 		<MdiAxisArrow />
 	</IconToggle>
-	<IconToggle bind:checked={$viewerSettings.darkMode} title="Dark Mode">
-		<TablerSunMoon />
+	<IconToggle
+		bind:checked={$viewerSettings.lightMode}
+		title={$viewerSettings.lightMode ? 'Dark Mode' : 'Light Mode'}
+	>
+		<LucideLightbulb />
 	</IconToggle>
 </div>

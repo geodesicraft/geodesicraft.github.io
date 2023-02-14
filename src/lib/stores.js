@@ -5,12 +5,12 @@ const getDefaults = function (parameters) {
 	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
 };
 
-const getDarkModePreference = function (defaultValue) {
+const getLightModePreference = function (defaultValue) {
 	if (!browser) return defaultValue;
 	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		return true;
-	} else {
 		return false;
+	} else {
+		return true;
 	}
 };
 
@@ -36,8 +36,8 @@ export const viewerSettingsParameters = {
 	axisOverlay: {
 		default: false
 	},
-	darkMode: {
-		default: getDarkModePreference(false)
+	lightMode: {
+		default: getLightModePreference(true)
 	}
 };
 
