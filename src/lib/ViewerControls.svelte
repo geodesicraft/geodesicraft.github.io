@@ -6,7 +6,9 @@
 	import TablerSunMoon from '~icons/tabler/sun-moon';
 </script>
 
-<div class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700">
+<div
+	class="border-b-2 border-zinc-100 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 py-3.5 flex flex-wrap justify-around"
+>
 	<IconToggle bind:checked={$viewerSettings.autoRotate} title="Auto Rotate">
 		<TablerRotate360 />
 	</IconToggle>
@@ -17,13 +19,3 @@
 		<TablerSunMoon />
 	</IconToggle>
 </div>
-
-<style>
-	div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		gap: 0.6rem;
-		padding: 0.6rem;
-	}
-</style>

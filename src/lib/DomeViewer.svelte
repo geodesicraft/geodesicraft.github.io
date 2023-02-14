@@ -7,7 +7,7 @@
 	import AxisOverlay from '$lib/AxisOverlay.svelte';
 </script>
 
-<div>
+<div class="h-full cursor-grab">
 	<Canvas>
 		<PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
 			<OrbitControls autoRotate={$viewerSettings.autoRotate} enableZoom={true} />
@@ -22,10 +22,3 @@
 		<AxisOverlay visible={$viewerSettings.axisOverlay} />
 	</Canvas>
 </div>
-
-<style>
-	div {
-		height: 100%;
-		cursor: grab;
-	}
-</style>

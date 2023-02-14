@@ -2,14 +2,6 @@
 	import ViewerHeader from '$lib/ViewerHeader.svelte';
 </script>
 
-<div class="clickthroughable">
+<div class="clickthroughable grid h-full content-between">
 	<ViewerHeader />
 </div>
-
-<style>
-	div {
-		display: grid;
-		height: 100%;
-		align-content: space-between;
-	}
-</style>

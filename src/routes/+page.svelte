@@ -16,7 +16,7 @@
 	/>
 </svelte:head>
 
-<div class="main bg-zinc-100 dark:bg-zinc-600">
+<div class="main bg-zinc-100 dark:bg-zinc-600 grid h-screen">
 	<div class="sidebar">
 		<Sidebar />
 	</div>
@@ -30,7 +30,7 @@
 </div>
 
 <style lang="scss">
-	$sidebar-width: 15rem;
+	$sidebar-width: 17rem;
 
 	:global(*) {
 		font-family: sans-serif;
@@ -48,11 +48,6 @@
 
 	:global(.clickthroughable) {
 		pointer-events: none;
-	}
-
-	.main {
-		display: grid;
-		height: 100vh;
 	}
 
 	// wide view

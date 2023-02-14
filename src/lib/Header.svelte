@@ -5,9 +5,3 @@
 <div>
 	<ViewerControls />
 </div>
-
-<style>
-	div {
-		background: #d3d3d3;
-	}
-</style>

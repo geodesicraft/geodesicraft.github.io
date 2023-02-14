@@ -3,16 +3,7 @@
 	import DomeControlsSidebar from '$lib/DomeControlsSidebar.svelte';
 </script>
 
-<div>
+<div class="h-full grid grid-rows-[auto_1fr] overflow-hidden">
 	<ViewerControls />
 	<DomeControlsSidebar />
 </div>
-
-<style>
-	div {
-		height: 100vh;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		overflow: hidden;
-	}
-</style>

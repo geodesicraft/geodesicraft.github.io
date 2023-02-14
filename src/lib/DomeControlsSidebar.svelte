@@ -3,7 +3,7 @@
 	import Slider from '$lib/Slider.svelte';
 </script>
 
-<div class="bg-zinc-200 dark:bg-zinc-700">
+<div class="bg-zinc-200 dark:bg-zinc-700 flex flex-col gap-3 p-3 overflow-auto">
 	{#each Object.entries(domeSettingsParameters) as [key, value] (key)}
 		<Slider
 			title={value.title}
@@ -14,13 +14,3 @@
 		/>
 	{/each}
 </div>
-
-<style>
-	div {
-		display: flex;
-		flex-direction: column;
-		overflow: auto;
-		padding: 0.6rem;
-		gap: 0.6rem;
-	}
-</style>
