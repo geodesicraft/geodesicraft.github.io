@@ -13,4 +13,4 @@ npm run dev -- --host
 ```
 
 > **Note**
-> Sometimes when changing classes, they will not update until you stop and restart the dev server.
+> Sometimes when editing JavaScript classes, they will not update until you stop and restart the dev server.
