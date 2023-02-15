@@ -11,3 +11,6 @@ Or to expose the server to your local network (for testing on mobile, for exampl
 ```bash
 npm run dev -- --host
 ```
+
+> **Note**
+> Sometimes when changing classes, they will not update until you stop and restart the dev server.
