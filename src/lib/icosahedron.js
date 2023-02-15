@@ -1,4 +1,30 @@
+import Coordinates from '$lib/Coordinates.js';
+
 export const createIcosahedron = function () {
+	const icosahedron = {
+		vertices: [
+			// zig zag ring
+			new Coordinates().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 0),
+			new Coordinates().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 1),
+			new Coordinates().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 2),
+			new Coordinates().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 3),
+			new Coordinates().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 4),
+			new Coordinates().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 5),
+			new Coordinates().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 6),
+			new Coordinates().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 7),
+			new Coordinates().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 8),
+			new Coordinates().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 9),
+			// top
+			new Coordinates().setSpherical(1, 0, 0),
+			// bottom
+			new Coordinates().setSpherical(1, Math.PI, 0)
+		],
+		edges: [],
+		faces: []
+	};
+
+	console.log(icosahedron.vertices[0].getCartesian());
+
 	return {
 		// radians
 		// radius rho, inclination theta, azimuth phi
