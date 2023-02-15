@@ -9,9 +9,9 @@
 </script>
 
 <InstancedMesh {geometry} {material}>
-	{#each $domeData.verticesCoordinates as vertexCoordinates}
+	{#each $domeData.vertices as vertex}
 		<Instance
-			position={new Vector3(...vertexCoordinates)}
+			position={new Vector3(...vertex.getCartesian())}
 			scale={$domeSettings.vertexSize}
 			color={0x444444}
 		/>

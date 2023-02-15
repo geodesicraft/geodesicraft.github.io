@@ -4,16 +4,13 @@
 	import { domeSettings, domeData } from '$lib/stores.js';
 </script>
 
-{#each $domeData.edgesReference as edgeReference}
+{#each $domeData.edges as edge}
 	<Line2
 		material={new LineMaterial({
 			worldUnits: true,
 			linewidth: $domeSettings.edgeThickness,
 			color: 0x555555
 		})}
-		points={[
-			$domeData.verticesCoordinates[edgeReference[0]],
-			$domeData.verticesCoordinates[edgeReference[1]]
-		]}
+		points={edge.getVertices().map((vertex) => vertex.getCartesian())}
 	/>
 {/each}
