@@ -74,7 +74,7 @@ export const viewerSettingsParameters = {
 		default: false
 	},
 	lightMode: {
-		default: getLightModePreference(true)
+		default: getLightModePreference(false)
 	},
 	selectedDomeSetting: {
 		default: Object.keys(domeSettingsParameters)[0]
