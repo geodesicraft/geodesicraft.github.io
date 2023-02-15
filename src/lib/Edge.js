@@ -1,15 +1,16 @@
 export default class Edge {
-	#vertex1;
-	#vertex2;
+	#vertices = [];
 
-	setVertices(vertex1, vertex2) {
-		// variable references the same object; not a copy
-		this.#vertex1 = vertex1;
-		this.#vertex2 = vertex2;
-
-		this.#vertex1.addConnectedEdge(this);
-		this.#vertex2.addConnectedEdge(this);
-
+	setVertices(vertices) {
+		// these vertices reference the original vertex objects; not copies
+		for (let vertex of vertices) {
+			vertex.addConnectedEdge(this);
+			this.#vertices.push(vertex);
+		}
 		return this;
+	}
+
+	getVertices() {
+		return this.#vertices;
 	}
 }
