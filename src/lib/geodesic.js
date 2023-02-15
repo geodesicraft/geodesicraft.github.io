@@ -1,9 +1,13 @@
 import { domeData } from '$lib/stores.js';
-import { sphericalToCartesian } from '$lib/sphericalToCartesian.js';
-import { createIcosahedron } from '$lib/icosahedron.js';
+import { sphericalToCartesian } from '$lib/sphericalToCartesian-old.js';
+import { createIcosahedron } from '$lib/icosahedron-old.js';
 import { findVertexBetween } from '$lib/findVertexBetween';
+import Icosahedron from '$lib/icosahedron';
 
 export function createGeodesic() {
+	const icosahedronNew = new Icosahedron();
+	console.log(icosahedronNew);
+
 	const icosahedron = createIcosahedron();
 
 	const sphericalVertices = icosahedron.sphericalVertices;

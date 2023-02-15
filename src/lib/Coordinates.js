@@ -17,9 +17,9 @@ export default class Coordinates {
 		return [rho, theta, phi];
 	}
 
-	#rho = 0;
-	#theta = 0;
-	#phi = 0;
+	#rho;
+	#theta;
+	#phi;
 
 	getSpherical() {
 		return [this.#rho, this.#theta, this.#phi];
