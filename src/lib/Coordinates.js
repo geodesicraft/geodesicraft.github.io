@@ -1,5 +1,5 @@
 export default class Coordinates {
-	static #sphericalToCartesian(rho, theta, phi) {
+	static #sphericalToCartesian([rho, theta, phi]) {
 		// radius, inclination, aziumuth
 		const x = rho * Math.sin(theta) * Math.sin(phi);
 		const y = rho * Math.cos(theta);
@@ -9,7 +9,7 @@ export default class Coordinates {
 	// https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates
 	// This formula is modified so x, y, z is consistent with Minecraft and Three.js
 
-	static #cartesianToSpherical(x, y, z) {
+	static #cartesianToSpherical([x, y, z]) {
 		// TODO
 		const rho = 0;
 		const theta = 0;
@@ -25,20 +25,18 @@ export default class Coordinates {
 		return [this.#rho, this.#theta, this.#phi];
 	}
 
-	setSpherical(rho, theta, phi) {
-		this.#rho = rho;
-		this.#theta = theta;
-		this.#phi = phi;
+	setSpherical(sphericalCoordinates) {
+		[this.#rho, this.#theta, this.#phi] = sphericalCoordinates;
 
 		return this;
 	}
 
 	getCartesian() {
-		return Coordinates.#sphericalToCartesian(this.#rho, this.#theta, this.#phi);
+		return Coordinates.#sphericalToCartesian([this.#rho, this.#theta, this.#phi]);
 	}
 
-	setCartesian(x, y, z) {
-		[this.#rho, this.#theta, this.#phi] = Coordinates.#cartesianToSpherical(x, y, z);
+	setCartesian([x, y, z]) {
+		[this.#rho, this.#theta, this.#phi] = Coordinates.#cartesianToSpherical([x, y, z]);
 
 		return this;
 	}

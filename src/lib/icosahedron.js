@@ -6,20 +6,20 @@ export default class Icosahedron {
 	constructor() {
 		this.vertices = [
 			// zig zag ring
-			new Vertex().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 0),
-			new Vertex().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 1),
-			new Vertex().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 2),
-			new Vertex().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 3),
-			new Vertex().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 4),
-			new Vertex().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 5),
-			new Vertex().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 6),
-			new Vertex().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 7),
-			new Vertex().setSpherical(1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 8),
-			new Vertex().setSpherical(1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 9),
+			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 0]),
+			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 1]),
+			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 2]),
+			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 3]),
+			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 4]),
+			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 5]),
+			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 6]),
+			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 7]),
+			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 8]),
+			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 9]),
 			// top
-			new Vertex().setSpherical(1, 0, 0),
+			new Vertex().setSpherical([1, 0, 0]),
 			// bottom
-			new Vertex().setSpherical(1, Math.PI, 0)
+			new Vertex().setSpherical([1, Math.PI, 0])
 		];
 
 		this.edges = [
