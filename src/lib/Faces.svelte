@@ -4,5 +4,5 @@
 </script>
 
 {#each $domeData.faces as face}
-	<Face faceCoordinates={face.getVertices().map((vertex) => vertex.getCartesian())} />
+	<Face verticesCartesian={face.getVertices().map((vertex) => vertex.getCartesian())} />
 {/each}

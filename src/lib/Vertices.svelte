@@ -1,8 +1,8 @@
 <script>
 	import { domeSettings, domeData } from '$lib/stores.js';
-	import { MeshStandardMaterial, SphereGeometry, Vector3 } from 'three';
+	import { MeshStandardMaterial, SphereGeometry } from 'three';
 	import { InstancedMesh } from '@threlte/core';
-	import { Instance } from '@threlte/core';
+	import Vertex from '$lib/Vertex.svelte';
 
 	const geometry = new SphereGeometry(0.5);
 	const material = new MeshStandardMaterial();
@@ -10,10 +10,6 @@
 
 <InstancedMesh {geometry} {material}>
 	{#each $domeData.vertices as vertex}
-		<Instance
-			position={new Vector3(...vertex.getCartesian())}
-			scale={$domeSettings.vertexSize}
-			color={0x444444}
-		/>
+		<Vertex vertexCartesian={vertex.getCartesian()} vertexSize={$domeSettings.vertexSize} />
 	{/each}
 </InstancedMesh>
