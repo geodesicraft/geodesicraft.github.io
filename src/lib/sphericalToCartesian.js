@@ -1,4 +1,4 @@
-export default function sphericalToCartesian(rho, theta, phi) {
+export default function sphericalToCartesian([rho, theta, phi]) {
 	// radius, inclination, aziumuth
 	const x = rho * Math.sin(theta) * Math.sin(phi);
 	const y = rho * Math.cos(theta);

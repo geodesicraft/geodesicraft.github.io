@@ -10,7 +10,7 @@ export default class Coordinates {
 		return [this.#rho, this.#theta, this.#phi];
 	}
 
-	setSpherical(rho, theta, phi) {
+	setSpherical([rho, theta, phi]) {
 		this.#rho = rho;
 		this.#theta = theta;
 		this.#phi = phi;
@@ -19,11 +19,11 @@ export default class Coordinates {
 	}
 
 	getCartesian() {
-		return sphericalToCartesian(...this.getSpherical());
+		return sphericalToCartesian(this.getSpherical());
 	}
 
-	setCartesian(x, y, z) {
-		this.setSpherical(...cartesianToSpherical(x, y, z));
+	setCartesian([x, y, z]) {
+		this.setSpherical(cartesianToSpherical([x, y, z]));
 
 		return this;
 	}

@@ -1,4 +1,4 @@
-export default function cartesianToSpherical(x, y, z) {
+export default function cartesianToSpherical([x, y, z]) {
 	// TODO
 	const rho = Math.sqrt((x ^ 2) + (y ^ 2) + (z ^ 2));
 	const theta = 0;
