@@ -5,16 +5,18 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout-888c9540.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page-e68c2cdd.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-21afa362.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-9a7f566f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-64cb71f3.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-cc69e881.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores-53e7652a.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-5612100c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-79cb23d1.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-91190f1e.js"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
+		<link href="./_app/immutable/assets/_layout.888c9540.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page.e68c2cdd.css" rel="stylesheet">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.fb1bf147.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.d500fcfe.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.9d445483.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.2cb50596.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.118d08c1.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.c0ccbb84.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/stores.29f72bb5.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.js.464e3015.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.79cb23d1.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_page.svelte.af17a833.mjs"><title>Geodesicraft</title><!-- HEAD_svelte-1idqgh6_START --><meta name="description" content="Geodesicraft is a suite of tools for generating and understanding geodesic domes."><!-- HEAD_svelte-1idqgh6_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -60,22 +62,30 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1o9deak">
-			import { start } from "./_app/immutable/start-21afa362.js";
+			
+			<script>
+				{
+					__sveltekit_6sakin = {
+						env: {},
+						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				env: {},
-				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1o9deak"]').parentNode,
-				version: "1676900565211",
-				hydrate: {
-					node_ids: [0, 2],
-					data: [null,null],
-					form: null,
-					error: null
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.fb1bf147.mjs"),
+						import("./_app/immutable/entry/app.118d08c1.mjs")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_6sakin.element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>
