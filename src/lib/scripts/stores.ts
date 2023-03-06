@@ -10,18 +10,16 @@ const getLightModePreference = function (defaultValue: boolean) {
 	}
 };
 
-type settings = domeSettings | viewerSettings;
-
 const getDefaults = function (parameters: settingsParameters) {
 	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
 };
 
-const mergeFromLocalStorage = function (name: string, defaults: settings) {
+const mergeFromLocalStorage = function (name: string, defaults: Record<string, any>) {
 	if (!browser) return defaults;
 	const localUnsure: string | null = window.localStorage.getItem(name);
 	if (localUnsure === null) return defaults;
 	const local = JSON.parse(localUnsure);
-	let merged: settings = {};
+	let merged: Record<string, any> = {};
 	for (const key of Object.keys(defaults)) {
 		if (local[key] !== undefined) {
 			merged[key] = local[key];
