@@ -5,7 +5,7 @@
 	export let value: string;
 
 	$: args = Object.entries($domeSettings).map(
-		([key, value]: [string, any]) => `${domeSettingsParameters[key].argument}=${value}`
+		([key, value]) => `${domeSettingsParameters[key].argument}=${value}`
 	);
 
 	$: value = `//geo ${args.join(' ')}`;

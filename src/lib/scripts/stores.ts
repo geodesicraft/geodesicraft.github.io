@@ -1,5 +1,8 @@
 import { writable, type Writable } from 'svelte/store';
 import { browser } from '$app/environment';
+import type Vertex from '$lib/scripts/Vertex';
+import type Edge from '$lib/scripts/Edge';
+import type Face from '$lib/scripts/Face';
 
 const getLightModePreference = function (defaultValue: boolean) {
 	if (!browser) return defaultValue;
@@ -10,7 +13,7 @@ const getLightModePreference = function (defaultValue: boolean) {
 	}
 };
 
-const getDefaults = function (parameters: settingsParameters) {
+const getDefaults = function (parameters: SettingsParameters) {
 	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
 };
 
@@ -30,7 +33,7 @@ const mergeFromLocalStorage = function (name: string, defaults: Record<string, a
 	return merged;
 };
 
-type settingsParameters = typeof domeSettingsParameters | typeof viewerSettingsParameters;
+type SettingsParameters = typeof domeSettingsParameters | typeof viewerSettingsParameters;
 
 export const domeSettingsParameters = {
 	subdivisions: {
@@ -59,7 +62,7 @@ export const domeSettingsParameters = {
 	}
 };
 
-interface domeSettings {
+interface DomeSettings {
 	subdivisions: number;
 	vertexSize: number;
 	edgeThickness: number;
@@ -67,7 +70,7 @@ interface domeSettings {
 
 export const domeSettings = writable(
 	mergeFromLocalStorage('domeSettings', getDefaults(domeSettingsParameters))
-) as Writable<domeSettings>;
+) as Writable<DomeSettings>;
 
 domeSettings.subscribe((value) => {
 	if (browser) {
@@ -90,16 +93,16 @@ export const viewerSettingsParameters = {
 	}
 };
 
-interface viewerSettings {
+interface ViewerSettings {
 	autoRotate: boolean;
 	axisOverlay: boolean;
 	lightMode: boolean;
-	selectedDomeSetting: keyof domeSettings;
+	selectedDomeSetting: keyof DomeSettings;
 }
 
 export const viewerSettings = writable(
 	mergeFromLocalStorage('viewerSettings', getDefaults(viewerSettingsParameters))
-) as Writable<viewerSettings>;
+) as Writable<ViewerSettings>;
 
 viewerSettings.subscribe((value) => {
 	if (browser) {
@@ -107,4 +110,10 @@ viewerSettings.subscribe((value) => {
 	}
 });
 
-export const domeData = writable({});
+interface Shape3D {
+	vertices: Array<Vertex>;
+	edges: Array<Edge>;
+	faces: Array<Face>;
+}
+
+export const domeData = writable({}) as Writable<Shape3D>;
