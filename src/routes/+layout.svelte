@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import '../app.css';
-	import { viewerSettings } from '$lib/stores.js';
+	import { viewerSettings } from '$lib/scripts/stores';
 	import { browser } from '$app/environment';
 
-	const setLightMode = function (lightMode) {
+	const setLightMode = function (lightMode: boolean) {
 		if (!browser) return;
 
 		if (lightMode) {

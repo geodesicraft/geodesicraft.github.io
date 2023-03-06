@@ -1,9 +1,5 @@
-import { writable } from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 import { browser } from '$app/environment';
-
-const getDefaults = function (parameters: Object) {
-	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
-};
 
 const getLightModePreference = function (defaultValue: boolean) {
 	if (!browser) return defaultValue;
@@ -14,12 +10,18 @@ const getLightModePreference = function (defaultValue: boolean) {
 	}
 };
 
-const mergeFromLocalStorage = function (name: string, defaults: object) {
+type settings = domeSettings | viewerSettings;
+
+const getDefaults = function (parameters: settingsParameters) {
+	return Object.fromEntries(Object.entries(parameters).map(([key, value]) => [key, value.default]));
+};
+
+const mergeFromLocalStorage = function (name: string, defaults: settings) {
 	if (!browser) return defaults;
 	const localUnsure: string | null = window.localStorage.getItem(name);
 	if (localUnsure === null) return defaults;
 	const local = JSON.parse(localUnsure);
-	let merged = {};
+	let merged: settings = {};
 	for (const key of Object.keys(defaults)) {
 		if (local[key] !== undefined) {
 			merged[key] = local[key];
@@ -29,6 +31,8 @@ const mergeFromLocalStorage = function (name: string, defaults: object) {
 	}
 	return merged;
 };
+
+type settingsParameters = typeof domeSettingsParameters | typeof viewerSettingsParameters;
 
 export const domeSettingsParameters = {
 	subdivisions: {
@@ -57,9 +61,15 @@ export const domeSettingsParameters = {
 	}
 };
 
+interface domeSettings {
+	subdivisions: number;
+	vertexSize: number;
+	edgeThickness: number;
+}
+
 export const domeSettings = writable(
 	mergeFromLocalStorage('domeSettings', getDefaults(domeSettingsParameters))
-);
+) as Writable<domeSettings>;
 
 domeSettings.subscribe((value) => {
 	if (browser) {
@@ -82,9 +92,16 @@ export const viewerSettingsParameters = {
 	}
 };
 
+interface viewerSettings {
+	autoRotate: boolean;
+	axisOverlay: boolean;
+	lightMode: boolean;
+	selectedDomeSetting: keyof domeSettings;
+}
+
 export const viewerSettings = writable(
 	mergeFromLocalStorage('viewerSettings', getDefaults(viewerSettingsParameters))
-);
+) as Writable<viewerSettings>;
 
 viewerSettings.subscribe((value) => {
 	if (browser) {

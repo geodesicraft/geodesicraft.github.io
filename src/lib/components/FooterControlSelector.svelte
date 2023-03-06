@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { domeSettingsParameters } from '$lib/scripts/stores';
 
-	export let selected: boolean;
+	export let selected: string;
 </script>
 
 <select

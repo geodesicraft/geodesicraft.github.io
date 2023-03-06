@@ -1,8 +1,8 @@
-<script>
-	import { createGeodesic } from '$lib/geodesic.js';
+<script lang="ts">
+	import { createGeodesic } from '$lib/scripts/geodesic';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import ViewerArea from '$lib/ViewerArea.svelte';
+	import ViewerArea from '$lib/components/ViewerArea.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import CommandBar from '$lib/components/CommandBar.svelte';
 
