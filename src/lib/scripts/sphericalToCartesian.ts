@@ -1,4 +1,6 @@
-export default function sphericalToCartesian([rho, theta, phi]: [number, number, number]): [
+import type { Vector3Tuple } from 'three';
+
+export default function sphericalToCartesian([rho, theta, phi]: Vector3Tuple): [
 	number,
 	number,
 	number

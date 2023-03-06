@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Line } from '@threlte/core';
 	import { Text } from '@threlte/extras';
-	import { LineBasicMaterial, Vector3 } from 'three';
+	import { LineBasicMaterial, Vector3, type Vector3Tuple } from 'three';
 
 	export let visible: boolean;
-	export let endCoordinate: [number, number, number];
+	export let endCoordinate: Vector3Tuple;
 	export let text: string;
 	export let color: string;
 

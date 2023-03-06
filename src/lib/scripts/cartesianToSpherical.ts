@@ -1,8 +1,6 @@
-export default function cartesianToSpherical([x, y, z]: [number, number, number]): [
-	number,
-	number,
-	number
-] {
+import type { Vector3Tuple } from 'three';
+
+export default function cartesianToSpherical([x, y, z]: Vector3Tuple): Vector3Tuple {
 	// TODO
 	const rho = Math.sqrt((x ^ 2) + (y ^ 2) + (z ^ 2));
 	const theta = 0;

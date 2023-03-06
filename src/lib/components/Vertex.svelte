@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Vector3 } from 'three';
+	import { Vector3, type Vector3Tuple } from 'three';
 	import { Instance } from '@threlte/core';
 
-	export let vertexCartesian: [number, number, number];
+	export let vertexCartesian: Vector3Tuple;
 	export let vertexSize: number;
 </script>
 

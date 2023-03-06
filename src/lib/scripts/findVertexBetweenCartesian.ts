@@ -1,7 +1,6 @@
-export const findVertexBetween = function (
-	vertex1: [number, number, number],
-	vertex2: [number, number, number]
-) {
+import type { Vector3Tuple } from 'three';
+
+export const findVertexBetweenCartesian = function (vertex1: Vector3Tuple, vertex2: Vector3Tuple) {
 	// [x, y z], [x, y, z]
 
 	const difference = vertex1.map((value, index) => value - vertex2[index]);

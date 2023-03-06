@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial';
 	import { Line2 } from '@threlte/core';
-	import type { Vector3 } from 'three';
+	import type { Vector3Tuple } from 'three';
 
 	export let edgeThickness: number;
-	export let verticesCartesian: Array<Vector3>;
+	export let verticesCartesian: Array<Vector3Tuple>;
 </script>
 
 <Line2
