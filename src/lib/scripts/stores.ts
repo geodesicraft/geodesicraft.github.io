@@ -33,7 +33,7 @@ const mergeFromLocalStorage = function (name: string, defaults: Record<string, a
 	return merged;
 };
 
-type SettingsParameters = typeof domeSettingsParameters | typeof viewerSettingsParameters;
+export type SettingsParameters = typeof domeSettingsParameters | typeof viewerSettingsParameters;
 
 export const domeSettingsParameters = {
 	subdivisions: {

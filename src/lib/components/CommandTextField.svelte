@@ -4,9 +4,17 @@
 	let args: Array<string>;
 	export let value: string;
 
-	$: args = Object.entries($domeSettings).map(
-		([key, value]) => `${domeSettingsParameters[key].argument}=${value}`
-	);
+	const getArgumentValuesFromSettings = function (
+		// any is not ideal
+		settings: Record<string, any>,
+		settingsParameters: Record<string, any>
+	) {
+		return Object.entries(settings).map(
+			([key, value]) => `${settingsParameters[key].argument}=${value}`
+		);
+	};
+
+	$: args = getArgumentValuesFromSettings($domeSettings, domeSettingsParameters);
 
 	$: value = `//geo ${args.join(' ')}`;
 </script>
