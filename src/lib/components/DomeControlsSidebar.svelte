@@ -2,15 +2,6 @@
 	import { domeSettings, domeSettingsParameters } from '$lib/scripts/stores';
 	import Slider from '$lib/components/Slider.svelte';
 
-	interface Control {
-		id: string;
-		title: string;
-		min: number;
-		max: number;
-		step: number;
-		value: number;
-	}
-
 	interface SettingsParameters {
 		[index: string]: {
 			title: string;
@@ -22,6 +13,15 @@
 
 	interface SettingsValues {
 		[index: string]: number;
+	}
+
+	interface Control {
+		id: string;
+		title: string;
+		min: number;
+		max: number;
+		step: number;
+		value: number;
 	}
 
 	type ControlList = Array<Control>;
