@@ -17,23 +17,18 @@ export interface Control {
 	min: number;
 	max: number;
 	step: number;
-	value: number;
 }
 
 export type ControlList = Array<Control>;
 
-export const makeControlList = function (
-	settingsParameters: SettingsParameters,
-	settingsValues: SettingsValues
-): ControlList {
+export const makeControlList = function (settingsParameters: SettingsParameters): ControlList {
 	return Object.entries(settingsParameters).map(
 		([id, parameters]): Control => ({
 			id,
 			title: parameters.title,
 			min: parameters.min,
 			max: parameters.max,
-			step: parameters.step,
-			value: settingsValues[id]
+			step: parameters.step
 		})
 	);
 };
