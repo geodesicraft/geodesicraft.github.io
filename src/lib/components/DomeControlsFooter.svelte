@@ -3,6 +3,14 @@
 	import { viewerSettings } from '$lib/scripts/stores';
 	import FooterControlSelector from '$lib/components/FooterControlSelector.svelte';
 	import Slider from '$lib/components/Slider.svelte';
+	import type { ControlOption, ControlOptionList } from '$lib/scripts/SettingsAndControls';
+
+	const options: ControlOptionList = Object.entries(domeSettingsParameters).map(
+		([id, parameters]): ControlOption => ({
+			id,
+			title: parameters.title
+		})
+	);
 </script>
 
 <div class="bg-zinc-300 dark:bg-zinc-700 p-5">
@@ -13,6 +21,6 @@
 		step={domeSettingsParameters[$viewerSettings.selectedDomeSetting].step}
 		numberClasses="bg-zinc-400 dark:bg-zinc-800"
 	>
-		<FooterControlSelector bind:selected={$viewerSettings.selectedDomeSetting} />
+		<FooterControlSelector bind:selected={$viewerSettings.selectedDomeSetting} {options} />
 	</Slider>
 </div>

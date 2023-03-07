@@ -5,7 +5,7 @@
 	export let value: string;
 
 	const getArgumentValuesFromSettings = function (
-		// any is not ideal
+		// any seems not ideal
 		settings: Record<string, any>,
 		settingsParameters: Record<string, any>
 	) {
