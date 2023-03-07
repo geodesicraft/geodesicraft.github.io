@@ -1,49 +1,11 @@
 <script lang="ts">
 	import { domeSettings, domeSettingsParameters } from '$lib/scripts/stores';
 	import Slider from '$lib/components/Slider.svelte';
-
-	interface SettingsParameters {
-		[index: string]: {
-			title: string;
-			min: number;
-			max: number;
-			step: number;
-		};
-	}
-
-	interface SettingsValues {
-		[index: string]: number;
-	}
-
-	interface Control {
-		id: string;
-		title: string;
-		min: number;
-		max: number;
-		step: number;
-		value: number;
-	}
-
-	type ControlList = Array<Control>;
-
-	const makeControlList = function (
-		settingsParameters: SettingsParameters,
-		settingsValues: SettingsValues
-	): ControlList {
-		return Object.entries(settingsParameters).map(
-			([id, parameters]): Control => ({
-				id,
-				title: parameters.title,
-				min: parameters.min,
-				max: parameters.max,
-				step: parameters.step,
-				value: settingsValues[id]
-			})
-		);
-	};
+	import { makeControlList, type SettingsValues } from '$lib/scripts/SettingsAndControls';
 
 	let controlList = makeControlList(
 		domeSettingsParameters,
+		// unknown seems not ideal
 		<SettingsValues>(<unknown>$domeSettings)
 	);
 </script>
