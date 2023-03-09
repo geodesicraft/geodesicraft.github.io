@@ -3,7 +3,7 @@
 
 	export let visible: boolean;
 
-	const axisDistance = 1.5;
+	const axisDistance = 2.25;
 </script>
 
 <Axis {visible} endCoordinate={[axisDistance, 0, 0]} color="#ff0000" text="X" />
