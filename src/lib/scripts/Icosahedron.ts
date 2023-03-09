@@ -1,30 +1,30 @@
 import Vertex from '$lib/scripts/Vertex';
 import Edge from '$lib/scripts/Edge';
 import Face from '$lib/scripts/Face';
+import type { Vector3Tuple } from 'three';
 
 export default class Icosahedron {
 	vertices: Array<Vertex>;
 	edges: Array<Edge>;
 	faces: Array<Face>;
 
+	#phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
+
 	constructor() {
 		this.vertices = [
-			// zig zag ring
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 0]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 1]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 2]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 3]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 4]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 5]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 6]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 7]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 8]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 9]),
-			// top
-			new Vertex().setSpherical([1, 0, 0]),
-			// bottom
-			new Vertex().setSpherical([1, Math.PI, 0])
-		];
+			[-1, this.#phi, 0],
+			[1, this.#phi, 0],
+			[-1, -this.#phi, 0],
+			[1, -this.#phi, 0],
+			[0, -1, this.#phi],
+			[0, 1, this.#phi],
+			[0, -1, -this.#phi],
+			[0, 1, -this.#phi],
+			[this.#phi, 0, -1],
+			[this.#phi, 0, 1],
+			[-this.#phi, 0, -1],
+			[-this.#phi, 0, 1]
+		].map((arr) => new Vertex().setCartesian(<Vector3Tuple>arr));
 
 		this.edges = [
 			// zig zag ring
