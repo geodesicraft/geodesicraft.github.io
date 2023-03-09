@@ -24,7 +24,7 @@ export default class Icosahedron {
 			[phi, 0, 1],
 			[-phi, 0, -1],
 			[-phi, 0, 1]
-		].map((vertex) => new Vertex().setCartesian(<Vector3Tuple>vertex));
+		].map((vertex) => new Vertex(<Vector3Tuple>vertex));
 
 		this.edges = [
 			[0, 1],
@@ -57,7 +57,7 @@ export default class Icosahedron {
 			[6, 9],
 			[7, 8],
 			[7, 11]
-		].map((edge) => new Edge().setVertices([this.vertices[edge[0]], this.vertices[edge[1]]]));
+		].map((edge) => new Edge([this.vertices[edge[0]], this.vertices[edge[1]]]));
 
 		this.faces = [
 			[0, 1, 5],
@@ -80,12 +80,8 @@ export default class Icosahedron {
 			[3, 9, 4],
 			[3, 10, 6],
 			[3, 11, 10]
-		].map((face) =>
-			new Face().setVertices([
-				this.vertices[face[0]],
-				this.vertices[face[1]],
-				this.vertices[face[2]]
-			])
+		].map(
+			(face) => new Face([this.vertices[face[0]], this.vertices[face[1]], this.vertices[face[2]]])
 		);
 	}
 }
