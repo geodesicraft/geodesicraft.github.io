@@ -59,7 +59,28 @@ export default class Icosahedron {
 			[10, 11]
 		].map((edge) => new Edge([this.vertices[edge[0]], this.vertices[edge[1]]]));
 
-		this.faces = [].map(
+		this.faces = [
+			[0, 1, 5],
+			[0, 1, 7],
+			[0, 5, 11],
+			[0, 7, 10],
+			[0, 10, 11],
+			[1, 5, 9],
+			[1, 7, 8],
+			[1, 8, 9],
+			[2, 3, 4],
+			[2, 3, 6],
+			[2, 4, 11],
+			[2, 6, 10],
+			[2, 10, 11],
+			[3, 4, 9],
+			[3, 6, 8],
+			[3, 8, 9],
+			[4, 5, 9],
+			[4, 5, 11],
+			[6, 7, 8],
+			[6, 7, 10]
+		].map(
 			(face) => new Face([this.vertices[face[0]], this.vertices[face[1]], this.vertices[face[2]]])
 		);
 	}
