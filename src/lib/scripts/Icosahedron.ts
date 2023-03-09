@@ -1,6 +1,7 @@
 import Vertex from '$lib/scripts/Vertex';
 import Edge from '$lib/scripts/Edge';
 import Face from '$lib/scripts/Face';
+import type { Vector3Tuple } from 'three';
 
 export default class Icosahedron {
 	vertices: Array<Vertex>;
@@ -8,86 +9,79 @@ export default class Icosahedron {
 	faces: Array<Face>;
 
 	constructor() {
+		const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
+
 		this.vertices = [
-			// zig zag ring
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 0]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 1]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 2]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 3]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 4]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 5]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 6]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 7]),
-			new Vertex().setSpherical([1, Math.PI / 2 - Math.atan(1 / 2), ((Math.PI * 2) / 10) * 8]),
-			new Vertex().setSpherical([1, Math.PI / 2 + Math.atan(1 / 2), ((Math.PI * 2) / 10) * 9]),
-			// top
-			new Vertex().setSpherical([1, 0, 0]),
-			// bottom
-			new Vertex().setSpherical([1, Math.PI, 0])
-		];
+			[-1, phi, 0],
+			[1, phi, 0],
+			[-1, -phi, 0],
+			[1, -phi, 0],
+			[0, -1, phi],
+			[0, 1, phi],
+			[0, -1, -phi],
+			[0, 1, -phi],
+			[phi, 0, -1],
+			[phi, 0, 1],
+			[-phi, 0, -1],
+			[-phi, 0, 1]
+		].map((vertex, index) => new Vertex(<Vector3Tuple>vertex, index));
 
 		this.edges = [
-			// zig zag ring
-			new Edge().setVertices([this.vertices[0], this.vertices[1]]),
-			new Edge().setVertices([this.vertices[1], this.vertices[2]]),
-			new Edge().setVertices([this.vertices[2], this.vertices[3]]),
-			new Edge().setVertices([this.vertices[3], this.vertices[4]]),
-			new Edge().setVertices([this.vertices[4], this.vertices[5]]),
-			new Edge().setVertices([this.vertices[5], this.vertices[6]]),
-			new Edge().setVertices([this.vertices[6], this.vertices[7]]),
-			new Edge().setVertices([this.vertices[7], this.vertices[8]]),
-			new Edge().setVertices([this.vertices[8], this.vertices[9]]),
-			new Edge().setVertices([this.vertices[9], this.vertices[0]]),
-			// upper ring
-			new Edge().setVertices([this.vertices[0], this.vertices[2]]),
-			new Edge().setVertices([this.vertices[2], this.vertices[4]]),
-			new Edge().setVertices([this.vertices[4], this.vertices[6]]),
-			new Edge().setVertices([this.vertices[6], this.vertices[8]]),
-			new Edge().setVertices([this.vertices[8], this.vertices[0]]),
-			// lower ring
-			new Edge().setVertices([this.vertices[1], this.vertices[3]]),
-			new Edge().setVertices([this.vertices[3], this.vertices[5]]),
-			new Edge().setVertices([this.vertices[5], this.vertices[7]]),
-			new Edge().setVertices([this.vertices[7], this.vertices[9]]),
-			new Edge().setVertices([this.vertices[9], this.vertices[1]]),
-			// top
-			new Edge().setVertices([this.vertices[10], this.vertices[0]]),
-			new Edge().setVertices([this.vertices[10], this.vertices[2]]),
-			new Edge().setVertices([this.vertices[10], this.vertices[4]]),
-			new Edge().setVertices([this.vertices[10], this.vertices[6]]),
-			new Edge().setVertices([this.vertices[10], this.vertices[8]]),
-			// bottom
-			new Edge().setVertices([this.vertices[11], this.vertices[1]]),
-			new Edge().setVertices([this.vertices[11], this.vertices[3]]),
-			new Edge().setVertices([this.vertices[11], this.vertices[5]]),
-			new Edge().setVertices([this.vertices[11], this.vertices[7]]),
-			new Edge().setVertices([this.vertices[11], this.vertices[9]])
-		];
+			[0, 1],
+			[0, 5],
+			[0, 7],
+			[0, 10],
+			[0, 11],
+			[1, 7],
+			[1, 5],
+			[1, 8],
+			[1, 9],
+			[2, 3],
+			[2, 4],
+			[2, 6],
+			[2, 10],
+			[2, 11],
+			[3, 4],
+			[3, 6],
+			[3, 8],
+			[3, 9],
+			[4, 5],
+			[4, 9],
+			[4, 11],
+			[5, 9],
+			[5, 11],
+			[6, 7],
+			[6, 8],
+			[6, 10],
+			[7, 8],
+			[7, 10],
+			[8, 9],
+			[10, 11]
+		].map((edge) => new Edge([this.vertices[edge[0]], this.vertices[edge[1]]]));
 
 		this.faces = [
-			// ring
-			new Face().setVertices([this.vertices[0], this.vertices[1], this.vertices[2]]),
-			new Face().setVertices([this.vertices[1], this.vertices[2], this.vertices[3]]),
-			new Face().setVertices([this.vertices[2], this.vertices[3], this.vertices[4]]),
-			new Face().setVertices([this.vertices[3], this.vertices[4], this.vertices[5]]),
-			new Face().setVertices([this.vertices[4], this.vertices[5], this.vertices[6]]),
-			new Face().setVertices([this.vertices[5], this.vertices[6], this.vertices[7]]),
-			new Face().setVertices([this.vertices[6], this.vertices[7], this.vertices[8]]),
-			new Face().setVertices([this.vertices[7], this.vertices[8], this.vertices[9]]),
-			new Face().setVertices([this.vertices[8], this.vertices[9], this.vertices[0]]),
-			new Face().setVertices([this.vertices[9], this.vertices[0], this.vertices[1]]),
-			// top
-			new Face().setVertices([this.vertices[10], this.vertices[0], this.vertices[2]]),
-			new Face().setVertices([this.vertices[10], this.vertices[2], this.vertices[4]]),
-			new Face().setVertices([this.vertices[10], this.vertices[4], this.vertices[6]]),
-			new Face().setVertices([this.vertices[10], this.vertices[6], this.vertices[8]]),
-			new Face().setVertices([this.vertices[10], this.vertices[8], this.vertices[0]]),
-			// bottom
-			new Face().setVertices([this.vertices[11], this.vertices[1], this.vertices[3]]),
-			new Face().setVertices([this.vertices[11], this.vertices[3], this.vertices[5]]),
-			new Face().setVertices([this.vertices[11], this.vertices[5], this.vertices[7]]),
-			new Face().setVertices([this.vertices[11], this.vertices[7], this.vertices[9]]),
-			new Face().setVertices([this.vertices[11], this.vertices[9], this.vertices[1]])
-		];
+			[0, 1, 5],
+			[0, 1, 7],
+			[0, 5, 11],
+			[0, 7, 10],
+			[0, 10, 11],
+			[1, 5, 9],
+			[1, 7, 8],
+			[1, 8, 9],
+			[2, 3, 4],
+			[2, 3, 6],
+			[2, 4, 11],
+			[2, 6, 10],
+			[2, 10, 11],
+			[3, 4, 9],
+			[3, 6, 8],
+			[3, 8, 9],
+			[4, 5, 9],
+			[4, 5, 11],
+			[6, 7, 8],
+			[6, 7, 10]
+		].map(
+			(face) => new Face([this.vertices[face[0]], this.vertices[face[1]], this.vertices[face[2]]])
+		);
 	}
 }

@@ -9,7 +9,7 @@
 
 <div class="h-full cursor-grab">
 	<Canvas>
-		<PerspectiveCamera position={{ y: 3, x: 3, z: 3 }}>
+		<PerspectiveCamera position={{ y: 4, x: 4, z: 4 }} lookAt={{ x: 0, y: 0, z: 0 }}>
 			<OrbitControls autoRotate={$viewerSettings.autoRotate} enableZoom={true} />
 		</PerspectiveCamera>
 
