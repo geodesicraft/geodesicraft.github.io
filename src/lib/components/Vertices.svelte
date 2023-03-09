@@ -13,11 +13,6 @@
 <InstancedMesh {geometry} {material}>
 	{#each $domeData.vertices as vertex}
 		<Vertex vertexCartesian={vertex.getCartesian()} vertexSize={$domeSettings.vertexSize} />
-	{/each}
-</InstancedMesh>
-
-<InstancedMesh {geometry} {material}>
-	{#each $domeData.vertices as vertex}
 		<VertexLabel
 			vertexCartesian={vertex.getCartesian()}
 			vertexSize={$domeSettings.vertexSize}
