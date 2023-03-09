@@ -24,7 +24,7 @@ export default class Icosahedron {
 			[phi, 0, 1],
 			[-phi, 0, -1],
 			[-phi, 0, 1]
-		].map((vertex) => new Vertex(<Vector3Tuple>vertex));
+		].map((vertex, index) => new Vertex(<Vector3Tuple>vertex, index));
 
 		this.edges = [
 			[0, 1],
