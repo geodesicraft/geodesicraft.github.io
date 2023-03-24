@@ -3,9 +3,10 @@
 
 	export let visible: boolean;
 
-	const axisDistance = 2.25;
+	const length = 3;
+	const division = 1;
 </script>
 
-<Axis {visible} endCoordinate={[axisDistance, 0, 0]} color="#ff0000" text="X" />
-<Axis {visible} endCoordinate={[0, axisDistance, 0]} color="#00ff00" text="Y" />
-<Axis {visible} endCoordinate={[0, 0, axisDistance]} color="#0000ff" text="Z" />
+<Axis {visible} direction="X" {length} {division} color="#ff0000" />
+<Axis {visible} direction="Y" {length} {division} color="#00ff00" />
+<Axis {visible} direction="Z" {length} {division} color="#0000ff" />
