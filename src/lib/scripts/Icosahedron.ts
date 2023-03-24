@@ -9,9 +9,9 @@ export default class Icosahedron {
 	faces: Array<Face>;
 
 	constructor() {
-		const phi = (1 + Math.sqrt(5)) / 2; // Golden ratio
+		const phi = (1 + Math.sqrt(5)) / 2;
 
-		// shift these vertices so the center is 0,0,0
+		// TODO: use phi to calculate the vertices
 		this.vertices = [
 			[0.0, 1.0, 0.0],
 			[0.894, 0.447, 0.0],
