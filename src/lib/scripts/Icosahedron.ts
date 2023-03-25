@@ -11,21 +11,35 @@ export default class Icosahedron {
 	constructor() {
 		const phi = (1 + Math.sqrt(5)) / 2;
 
-		// TODO: make these 1/phi or similar so that the radius is 1
 		this.vertices = [
-			[-1, phi, 0],
-			[1, phi, 0],
-			[-1, -phi, 0],
-			[1, -phi, 0],
-			[0, -1, phi],
-			[0, 1, phi],
-			[0, -1, -phi],
-			[0, 1, -phi],
-			[phi, 0, -1],
-			[phi, 0, 1],
-			[-phi, 0, -1],
-			[-phi, 0, 1]
+			[-1 / phi, 1, 0],
+			[1 / phi, 1, 0],
+			[-1 / phi, -1, 0],
+			[1 / phi, -1, 0],
+			[0, -1 / phi, 1],
+			[0, 1 / phi, 1],
+			[0, -1 / phi, -1],
+			[0, 1 / phi, -1],
+			[1, 0, -1 / phi],
+			[1, 0, 1 / phi],
+			[-1, 0, -1 / phi],
+			[-1, 0, 1 / phi]
 		].map((vertex, index) => new Vertex(<Vector3Tuple>vertex, index));
+		// TODO: make these 1/phi or similar so that the radius is 1
+		// this.vertices = [
+		// 	[-1, phi, 0],
+		// 	[1, phi, 0],
+		// 	[-1, -phi, 0],
+		// 	[1, -phi, 0],
+		// 	[0, -1, phi],
+		// 	[0, 1, phi],
+		// 	[0, -1, -phi],
+		// 	[0, 1, -phi],
+		// 	[phi, 0, -1],
+		// 	[phi, 0, 1],
+		// 	[-phi, 0, -1],
+		// 	[-phi, 0, 1]
+		// ].map((vertex, index) => new Vertex(<Vector3Tuple>vertex, index));
 
 		this.edges = [
 			[0, 1],

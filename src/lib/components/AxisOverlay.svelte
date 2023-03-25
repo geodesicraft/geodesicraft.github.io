@@ -3,7 +3,7 @@
 
 	export let visible: boolean;
 
-	const length = 3;
+	const length = 2;
 	const division = 1;
 </script>
 
