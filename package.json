@@ -20,7 +20,7 @@
 		"@iconify-json/tabler": "^1.1.60",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-static": "^1.0.5",
-		"@sveltejs/kit": "^1.0.0",
+		"@sveltejs/kit": "^1.15.2",
 		"@theatre/core": "^0.5.1",
 		"@theatre/studio": "^0.5.1",
 		"@threlte/core": "^5.0.8",
